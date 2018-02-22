@@ -17,4 +17,4 @@ weight = 60
 
 I am a Lab instructor for the following course at Iowa State University:
 
-- STAT421: 
+- STAT421: Survey Sampling Techniques

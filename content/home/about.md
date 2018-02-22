@@ -30,6 +30,6 @@ weight = 5
 
 # Biography
 
-Xiaodan Lyu is a PhD candidate of statistics at Iowa State University. Her research interests include data visualization, computational statistics and predictive models.
+I am a PhD candidate of statistics at Iowa State University. My research interests include data visualization, computational statistics and predictive models.
 
-我的中文名是吕孝丹。我本科毕业于武汉大学，目前是美国爱荷华州立大学统计系在读博士生。
+我叫吕孝丹，是美国爱荷华州立大学统计系在读博士生，本科毕业于武汉大学数学与统计学院。
