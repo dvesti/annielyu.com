@@ -16,12 +16,12 @@ weight = 65
 [[gallery_item]]
 album = "1"
 image = "gallery/Yellowstone.jpg"
-caption = "Write your image caption here"
+caption = "Yellowstone Sep-04-2017"
   
 [[gallery_item]]
 album = "1"
 image = "gallery/tree.jpg"
-caption = "Dark theme"
+caption = "Page Sep-03-2017"
 
 +++
     
