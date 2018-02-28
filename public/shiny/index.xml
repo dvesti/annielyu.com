@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Iowa DNR MSIM - SGCN Modeling</title>
+      <link>/shiny/birds_idnr/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/shiny/birds_idnr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Overlay Example - ggmap</title>
       <link>/shiny/overlay_ggmap/</link>
       <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>

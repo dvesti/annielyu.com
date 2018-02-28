@@ -3,13 +3,13 @@
 date = "2018-02-27"
 
 # Project title.
-title = "ISA On-Farm Trial Summarization Tool"
+title = "Iowa DNR MSIM - SGCN Modeling"
 
 # Project summary to display on homepage.
-summary = "Designed to provide individual and across field summaries of on-farm trials conducted by farmers working with the Iowa Soybean Association."
+summary = "Predictive occurrence maps for Species of Greatest Conservation Need (SGCN) using data from the MSIM program."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "shiny_isa.png"
+image_preview = "shiny_idnr.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
