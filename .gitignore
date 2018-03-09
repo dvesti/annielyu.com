@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 .DS_Store
-/public/**
+# Ignore folder named `public`
+public/
