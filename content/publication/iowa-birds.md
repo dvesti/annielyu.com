@@ -33,7 +33,7 @@ selected = true
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-projects = [""]
+# projects = [""]
 
 # Links (optional).
 url_pdf = "http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0173041&type=printable"
