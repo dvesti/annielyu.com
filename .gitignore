@@ -5,5 +5,5 @@
 .DS_Store
 
 public
-static/figures
+static/img
 public/*/.html
