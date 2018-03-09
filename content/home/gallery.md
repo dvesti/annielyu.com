@@ -16,12 +16,22 @@ weight = 65
 [[gallery_item]]
 album = "1"
 image = "gallery/Yellowstone.jpg"
-caption = "Yellowstone Sep-04-2017"
+caption = "Yellowstone, Sep-04-2017"
   
 [[gallery_item]]
 album = "1"
 image = "gallery/tree.jpg"
-caption = "Page Sep-03-2017"
+caption = "Page, Sep-03-2017"
+
+[[gallery_item]]
+album = "1"
+image = "gallery/antelope.jpg"
+caption = "Antelope, Sep-03-2017"
+
+[[gallery_item]]
+album = "1"
+image = "gallery/marmot.jpg"
+caption = "Marmot, Badlands National Park, Jul-07-2016"
 
 +++
     
