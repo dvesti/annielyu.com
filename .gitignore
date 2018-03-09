@@ -5,4 +5,4 @@
 .DS_Store
 
 public
-public/*/.html
+public/shiny/*/index.html
