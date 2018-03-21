@@ -33,6 +33,11 @@ album = "1"
 image = "gallery/marmot.jpg"
 caption = "Marmot, Badlands National Park, Jul-07-2016"
 
+[[gallery_item]]
+album = "1"
+image = "gallery/isu_squirrel.jpg"
+caption = "Squirrel, Iowa State Campus, Oct-22-2016"
+
 +++
     
 {{< gallery album="1" >}}
