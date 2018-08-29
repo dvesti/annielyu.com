@@ -4,5 +4,4 @@
 .Ruserdata
 .DS_Store
 
-public
-public/shiny/*/index.html
+public/
