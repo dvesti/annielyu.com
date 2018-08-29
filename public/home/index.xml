@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on My homepage</title>
+    <title>Homes on my homepage</title>
     <link>/home/</link>
-    <description>Recent content in Homes on My homepage</description>
+    <description>Recent content in Homes on my homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; [Xiaodan Lyu](/) 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>/home/about/</guid>
-      <description>Biography I am a PhD candidate of statistics at Iowa State University. My research interests include data visualization, computational statistics and predictive models.
+      <description>Biography I am a PhD candidate of statistics at Iowa State University. My advisors are Dr. Heike Hofmann and Dr. Emily Berg.
 我叫吕孝丹，是美国爱荷华州立大学统计系在读博士生，本科毕业于武汉大学数学与统计学院。</description>
     </item>
     
@@ -92,7 +92,7 @@
       <pubDate>Mon, 26 Feb 2018 22:00:00 +0000</pubDate>
       
       <guid>/home/gallery/</guid>
-      <description>    </description>
+      <description>       </description>
     </item>
     
     <item>

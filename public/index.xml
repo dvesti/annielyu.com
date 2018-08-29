@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My homepage on My homepage</title>
+    <title>my homepage on my homepage</title>
     <link>/</link>
-    <description>Recent content in My homepage on My homepage</description>
+    <description>Recent content in my homepage on my homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; [Xiaodan Lyu](/) 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
@@ -16,6 +16,15 @@
       <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/project/nri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cropland Data Layer &amp; Soil Survey</title>
+      <link>/shiny/shiny_cdl_wss/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/shiny/shiny_cdl_wss/</guid>
       <description></description>
     </item>
     
@@ -56,11 +65,11 @@
     </item>
     
     <item>
-      <title>Web Soil Survey Data</title>
-      <link>/shiny/overlay_leaflet/</link>
-      <pubDate>Tue, 27 Feb 2018 00:00:00 +0000</pubDate>
+      <title>Empirical Bayes Small Area Prediction of Sheet and Rill Erosion Using a Zero-Inflated Lognormal Model</title>
+      <link>/talk/jsm2018-speed/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 -0500</pubDate>
       
-      <guid>/shiny/overlay_leaflet/</guid>
+      <guid>/talk/jsm2018-speed/</guid>
       <description></description>
     </item>
     

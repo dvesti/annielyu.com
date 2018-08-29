@@ -59,10 +59,23 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-117769967-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="My homepage">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="My homepage">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="my homepage">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="my homepage">
   
 
   <link rel="manifest" href="/site.webmanifest">
@@ -76,9 +89,9 @@
   <meta property="twitter:site" content="@annie_isu">
   <meta property="twitter:creator" content="@annie_isu">
   
-  <meta property="og:site_name" content="My homepage">
+  <meta property="og:site_name" content="my homepage">
   <meta property="og:url" content="/shiny/sys/">
-  <meta property="og:title" content="Systematic Sampling Example | My homepage">
+  <meta property="og:title" content="Systematic Sampling Example | my homepage">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
@@ -89,7 +102,7 @@
 
   
 
-  <title>Systematic Sampling Example | My homepage</title>
+  <title>Systematic Sampling Example | my homepage</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -108,7 +121,7 @@
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/">My homepage</a>
+      <a class="navbar-brand" href="/">my homepage</a>
     </div>
 
     
@@ -257,7 +270,7 @@
   <span class="article-date">
     
     <time datetime="2018-02-27 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Feb 27, 2018
+      Tue, Feb 27, 2018
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -272,6 +285,9 @@
   
 
   
+  
+  <span class="middot-divider"></span>
+  <a href="/shiny/sys/#disqus_thread"></a>
   
 
   
@@ -350,9 +366,9 @@
         
         <li><a href="/shiny/overlay_ggmap/">Overlay Example - ggmap</a></li>
         
-        <li><a href="/shiny/overlay_leaflet/">Web Soil Survey Data</a></li>
-        
         <li><a href="/shiny/shiny_isa/">ISA On-Farm Trial Summarization Tool</a></li>
+        
+        <li><a href="/shiny/shiny_cdl_wss/">Cropland Data Layer &amp; Soil Survey</a></li>
         
         <li><a href="/shiny/birds_idnr/">Iowa DNR MSIM - SGCN Modeling</a></li>
         
@@ -363,6 +379,29 @@
     
 
     
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "annie_lyu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
 
 
   </div>
@@ -372,7 +411,7 @@
   <div class="container">
     <p class="powered-by">
 
-      &copy; 2018 &middot; 
+      &copy; <a href="/">Xiaodan Lyu</a> 2018 &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
@@ -417,6 +456,8 @@
     
 
     
+    
+    <script id="dsq-count-scr" src="//annie_lyu.disqus.com/count.js" async></script>
     
 
     
