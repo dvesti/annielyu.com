@@ -14,4 +14,4 @@ header:
 
 :cake: :cake: :cake:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/ByDdfFA"><a href="//imgur.com/ByDdfFA">dessert</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/6pWtEzs"><a href="//imgur.com/6pWtEzs">dessert</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
