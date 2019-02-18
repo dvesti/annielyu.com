@@ -12,11 +12,21 @@ subtitle = "Travel, Photography, Sharing"
   
 # Order that this section will appear in.
 weight = 65
+
+[[gallery_item]]
+album = "1"
+image = "gallery/bahama.jpg"
+caption = "Bahama, Nov-17-2018"
+
+[[gallery_item]]
+album = "1"
+image = "gallery/golden_gate_bridge.jpg"
+caption = "Golden Gate Bridge, Jul-07-2018"
   
 [[gallery_item]]
 album = "1"
 image = "gallery/Yellowstone.jpg"
-caption = "Yellowstone, Sep-04-2017"
+caption = "Morning Glory Pool, Yellowstone National Park, Sep-04-2017"
   
 [[gallery_item]]
 album = "1"
@@ -36,7 +46,7 @@ caption = "Marmot, Badlands National Park, Jul-07-2016"
 [[gallery_item]]
 album = "1"
 image = "gallery/isu_squirrel.jpg"
-caption = "Squirrel, Iowa State Campus, Oct-22-2016"
+caption = "Squirrel, ISU Campus, Oct-22-2016"
 
 +++
     
