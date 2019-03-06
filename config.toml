@@ -217,12 +217,12 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:lyux@iastate.edu"
+    link = "mailto:lyux1994@gmail.com"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/annie_isu"
+    link = "//twitter.com/annielyu_stats"
 
   [[params.social]]
     icon = "linkedin-square"
