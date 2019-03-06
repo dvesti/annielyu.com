@@ -3,20 +3,20 @@
 date = "2018-02-27"
 
 # Project title.
-title = "Overlay Example - ggmap"
+title = "iNtr: an interactive NRI table review tool"
 
 # Project summary to display on homepage.
-summary = "An example of overlaying spatial polygons and raster images using R."
+summary = "This is a shiny app tool designed for reviewing tables in Natural Resource Inventory reports."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "overlay_ggmap.png"
+image_preview = "shiny_iNtr.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["survey", "shiny"]
+tags = ["shiny", "web scraping", "map"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://lyux.shinyapps.io/Shiny_Overlay/"
+external_link = "https://lyux.shinyapps.io/table_review/"
 
 # Does the project detail page use math formatting?
 math = false
