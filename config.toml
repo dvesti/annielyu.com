@@ -59,7 +59,7 @@ defaultContentLanguageInSubdir = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "profile.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "lyux1994@gmail.com"
+  email = "annielyu8@gmail.com"
   address = "1215 Snedecor Hall, Iowa State University, Ames, 50011, USA"
   office_hours = ""
   phone = ""
@@ -217,7 +217,7 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:lyux1994@gmail.com"
+    link = "mailto:annielyu8@gmail.com"
 
   [[params.social]]
     icon = "twitter"
