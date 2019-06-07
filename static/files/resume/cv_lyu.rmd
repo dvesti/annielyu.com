@@ -1,0 +1,181 @@
+---
+title: "Xiaodan Lyu's resume"
+author: Xiaodan Lyu
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: false
+---
+
+Aside
+================================================================================
+
+
+![Xiaodan Lyu](http://annielyu.com/img/profile.jpg){width=50%}
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-rss"></i> [annielyu.com](annielyu.com)
+- <i class="fa fa-envelope"></i> annielyu8@gmail.com
+- <i class="fa fa-github"></i> [github.com/XiaodanLyu](https://github.com/XiaodanLyu)
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/annielyu](http://linkedin.com/in/annielyu) 
+
+
+Technical Skills {#skills}
+--------------------------------------------------------------------------------
+
+- R, Shiny, Github, C, SAS, Python, SQL, Linux
+
+- Statistical modeling, data manipulation, data visualization, data mining, and machine learning.
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Xiaodan Lyu {#title}
+--------------------------------------------------------------------------------
+
+### Anticipated 2020 PhD University Graduate
+
+- Diversely trained to perform statistical modeling and data analysis
+- Designed interactive dashboards for data visualization
+- Wrote robust codes with multiple programming languages
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Iowa State University (ISU)
+
+Doctorate of Philosophy (Ph.D.) in Statistics
+
+Ames, Iowa
+
+2015 - Present
+
+Thesis: Small area estimation and visualization
+
+### Iowa State University (ISU)
+
+Master of Science (M.S.) in Statistics
+
+Ames, Iowa
+
+2015 - 2018
+
+Creative Component: Empirical Bayes small area prediction of sheet and rill erosion using a zero-inflated lognormal model
+
+### Wuhan University (WHU)
+
+Bachelor of Science (B.S.) in Statistics
+
+Wuhan, China
+
+2011 - 2015
+
+Thesis: Cox proportional hazard model and its application in survival analysis
+
+Publication {data-icon=book}
+--------------------------------------------------------------------------------
+
+### Using landscape habitat associations to prioritize areas of conservation action for terrestrial birds
+
+PloS one 12 (3), [doi:10.1371/journal.pone.0173041](https://doi.org/10.1371/journal.pone.0173041)
+
+Ames, Iowa
+
+2017
+
+Harms, T.M., Murphy, K.T., **Lyu, X.**, Patterson, S.S., Kinkead, K.E., Dinsmore, S.J. and Frese, P.W.
+
+Research Experience {data-icon=user-graduate}
+--------------------------------------------------------------------------------
+
+### Graduate Research Assistant
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2016 - Present
+
+- Authored 4 technical manuscripts for publication in peer-reviewed journals
+- Analyzed 5+ large data sets over 5 gigabytes using R and SQL
+- Developed an R package to web-scrape soil survey data and land use data
+- Developed 3 dashboards with R Shiny to visualize predictions or assess data quality
+- Obtained hands-on experience on statistical learning and high performance computing
+
+### Survey Statistics Teaching Assistant
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2018 Spring
+
+- Coached 36 graduate and undergraduate students on SAS programming
+- Taught lab materials and designed lab assignment once a week
+- 4.68 average rating on a 5-point scale based on student responses
+
+Work Experience {data-icon=chart-area}
+--------------------------------------------------------------------------------
+
+### Visualization Analyst Intern
+
+Autodesk
+
+San Francisco, California
+
+2019 Summer
+
+- Utilized, developed, and launched data pipelines from data warehouse to dashboards
+- Improved, designed, and delivered relevant executive/operational dashboards in Looker or Power BI
+- Performed predictive analytics and statistical learning to optimize product marketing
+  
+### Data Analyst Intern
+
+Gesellschaft für Konsumforschung
+
+Shanghai, China
+
+2014 Summer
+
+- Produced 100+ graphs and 5+ reports for clients
+- Gained first-hand experience on market research and sales industry
+
+Awards {data-icon=medal}
+--------------------------------------------------------------------------------
+### Student Travel Grant
+
+International Total Survey Error Workshop
+
+Bergamo, Italy
+
+2019
+
+### Holly and Beth Fryer Scholarship
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2017
+
+### Vera David Award
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2016
