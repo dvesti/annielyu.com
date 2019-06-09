@@ -50,7 +50,7 @@ Xiaodan Lyu {#title}
 ### Anticipated 2020 PhD University Graduate
 
 - Diversely trained to perform statistical modeling and data analysis
-- Designed interactive dashboards for data visualization
+- Designed 3+ Apps for data analytics and visualization
 - Wrote robust codes with multiple programming languages
 
 Education {data-icon=graduation-cap data-concise=true}
@@ -113,7 +113,7 @@ Ames, Iowa
 - Authored 4 technical manuscripts for publication in peer-reviewed journals
 - Analyzed 5+ large data sets over 5 gigabytes using R and SQL
 - Developed an R package to web-scrape soil survey data and land use data
-- Developed 3 dashboards with R Shiny to visualize predictions or assess data quality
+- Developed 3 Apps with R Shiny to visualize predictions or assess data quality
 - Obtained hands-on experience on statistical learning and high performance computing
 
 ### Survey Statistics Teaching Assistant
@@ -140,7 +140,7 @@ San Francisco, California
 2019 Summer
 
 - Utilized, developed, and launched data pipelines from data warehouse to dashboards
-- Improved, designed, and delivered relevant executive/operational dashboards in Looker or Power BI
+- Improved, designed, and delivered relevant executive/operational dashboards in Power BI
 - Performed predictive analytics and statistical learning to optimize product marketing
   
 ### Data Analyst Intern
