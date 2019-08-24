@@ -27,9 +27,11 @@ Contact Info {#contact}
 Technical Skills {#skills}
 --------------------------------------------------------------------------------
 
-- R, Shiny, Github, C, SAS, Python, SQL, Linux
+- R, Python, SQL, Github, Linux, C, SAS
 
-- Statistical modeling, data manipulation, data visualization, data mining, and machine learning.
+- R Shiny, D3, Power BI, Looker, Domo
+
+- Statistical learning, data mining, software development
 
 
 Disclaimer {#disclaimer}
@@ -49,9 +51,11 @@ Xiaodan Lyu {#title}
 
 ### Anticipated 2020 PhD University Graduate
 
-- Diversely trained to perform statistical modeling and data analysis
-- Designed 3+ Apps for data analytics and visualization
-- Wrote robust codes with multiple programming languages
+- Worked on data science for over 7 years
+- Delivered 5+ interactive data visualization tools
+- Equipped with comprehensive statistical theories and methodologies
+- Published 1 of 4 manuscripts in peer-reviewed journals, to date
+- Reviewed 1 manuscript for a renowned peer-reviewed journal
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -99,34 +103,6 @@ Ames, Iowa
 
 Harms, T.M., Murphy, K.T., **Lyu, X.**, Patterson, S.S., Kinkead, K.E., Dinsmore, S.J. and Frese, P.W.
 
-Research Experience {data-icon=user-graduate}
---------------------------------------------------------------------------------
-
-### Graduate Research Assistant
-
-Department of Statistics, ISU
-
-Ames, Iowa
-
-2016 - Present
-
-- Authored 4 technical manuscripts for publication in peer-reviewed journals
-- Analyzed 5+ large data sets over 5 gigabytes using R and SQL
-- Developed an R package to web-scrape soil survey data and land use data
-- Developed 3 Apps with R Shiny to visualize predictions or assess data quality
-- Obtained hands-on experience on statistical learning and high performance computing
-
-### Survey Statistics Teaching Assistant
-
-Department of Statistics, ISU
-
-Ames, Iowa
-
-2018 Spring
-
-- Coached 36 graduate and undergraduate students on SAS programming
-- Taught lab materials and designed lab assignment once a week
-- 4.68 average rating on a 5-point scale based on student responses
 
 Work Experience {data-icon=chart-area}
 --------------------------------------------------------------------------------
@@ -139,9 +115,10 @@ San Francisco, California
 
 2019 Summer
 
-- Utilized, developed, and launched data pipelines from data warehouse to dashboards
-- Improved, designed, and delivered relevant executive/operational dashboards in Power BI
-- Performed predictive analytics and statistical learning to optimize product marketing
+- Developed data pipelines using API, SQL and Python from data platform to dashboards
+- Improved, designed, and delivered SaaS business intelligence dashboards in Domo and Power BI
+- Prioritized potential customers using statistical models with R and Python codes
+- Presented project results to stakeholders and senior leaders
   
 ### Data Analyst Intern
 
@@ -151,8 +128,43 @@ Shanghai, China
 
 2014 Summer
 
-- Produced 100+ graphs and 5+ reports for clients
+- Prepared sales reports for customers using Excel, PowerPoint and in-house software
 - Gained first-hand experience on market research and sales industry
+
+
+Research Experience {data-icon=user-graduate}
+--------------------------------------------------------------------------------
+
+### Graduate Research Assistant
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2016 - Present
+
+- Developed an R package to work with cropland database API
+- Developed one R Shiny app to added to the Shiny user showcase soon
+- Integrated large spatial datasets for modelling and visualizing soil erosion in US
+- Developed data dashboards to visualize research results for the general audience
+- Obtained hands-on experience with cloud server, instance and database
+- Presented research results in international conferences and group meetings
+
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Survey Statistics Teaching Assistant
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2018 Spring
+
+- Coached 36 graduate and undergraduate students on SAS programming
+- Taught lab materials and designed lab assignment once a week
+- 4.68 average rating on a 5-point scale based on student responses
 
 Awards {data-icon=medal}
 --------------------------------------------------------------------------------
