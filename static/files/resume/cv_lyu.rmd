@@ -144,7 +144,7 @@ Ames, Iowa
 2016 - Present
 
 - Developed an R package to work with cropland database API
-- Developed one R Shiny app to added to the Shiny user showcase soon
+- Developed one R Shiny app to be added to the Shiny user showcase soon
 - Integrated large spatial datasets for modelling and visualizing soil erosion in US
 - Developed data dashboards to visualize research results for the general audience
 - Obtained hands-on experience with cloud server, instance and database
@@ -168,6 +168,14 @@ Ames, Iowa
 
 Awards {data-icon=medal}
 --------------------------------------------------------------------------------
+### Vince Sposito Statistical Computing Award
+
+Department of Statistics, ISU
+
+Ames, Iowa
+
+2019
+
 ### Student Travel Grant
 
 International Total Survey Error Workshop

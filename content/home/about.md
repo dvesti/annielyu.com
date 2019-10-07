@@ -10,9 +10,9 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
+    "Statistical Computing",
     "Data Visualization",
     "Data Mining",
-    "Statistical Computing",
     "Small Area Estimation"
   ]
 
@@ -36,6 +36,6 @@ weight = 5
 
 # Biography
 
-I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. For more check out my [CV](/files/resume/cv_lyu.html).
+I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg.
 
 我叫吕孝丹，是美国爱荷华州立大学统计系在读博士生，本科毕业于武汉大学数学与统计学院。

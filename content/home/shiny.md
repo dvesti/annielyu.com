@@ -7,7 +7,7 @@ title = "Shiny Apps"
 subtitle = ""
   
 # Order that this section will appear in.
-weight = 65
+weight = 10
 
 folder = "shiny"
 
