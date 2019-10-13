@@ -3,7 +3,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "http://annielyu.com/"
+baseurl = "https://annielyu.com/"
 
 # Title of your site
 title = "Annie Lyu | 吕孝丹"
@@ -226,17 +226,17 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/annielyu_stats"
+    link = "twitter.com/annielyu_stats"
 
   [[params.social]]
     icon = "linkedin-square"
     icon_pack = "fa"
-    link = "//linkedin.com/in/annielyu"
+    link = "linkedin.com/in/annielyu"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/XiaodanLyu"
+    link = "github.com/XiaodanLyu"
 
 
 # Navigation Links
