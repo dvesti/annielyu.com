@@ -12,7 +12,7 @@ Aside
 ================================================================================
 
 
-![Xiaodan Lyu](http://annielyu.com/img/profile.jpg){width=50%}
+![Xiaodan Lyu](https://annielyu.com/img/profile.jpg){width=50%}
 
 
 Contact Info {#contact}
@@ -20,8 +20,8 @@ Contact Info {#contact}
 
 - <i class="fa fa-rss"></i> [annielyu.com](annielyu.com)
 - <i class="fa fa-envelope"></i> annielyu8@gmail.com
-- <i class="fa fa-github"></i> [github.com/XiaodanLyu](https://github.com/XiaodanLyu)
-- <i class="fa fa-linkedin"></i> [linkedin.com/in/annielyu](http://linkedin.com/in/annielyu) 
+- <i class="fa fa-github"></i> [github.com/XiaodanLyu](github.com/XiaodanLyu)
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/annielyu](linkedin.com/in/annielyu/) 
 
 
 Technical Skills {#skills}
@@ -29,9 +29,9 @@ Technical Skills {#skills}
 
 - R, Python, SQL, Github, Linux, C, SAS
 
-- R Shiny, D3, Power BI, Looker, Domo
+- R Shiny, Power BI, Looker, Domo
 
-- Statistical learning, data mining, software development
+- Statistical Learning, Data Visualization
 
 
 Disclaimer {#disclaimer}
@@ -52,10 +52,10 @@ Xiaodan Lyu {#title}
 ### Anticipated 2020 PhD University Graduate
 
 - Worked on data science for over 7 years
-- Delivered 5+ interactive data visualization tools
 - Equipped with comprehensive statistical theories and methodologies
+- Developed one R Shiny app to be added to the R Shiny user showcase soon
+- Developed an R package to facilitate working with land use data API
 - Published 1 of 4 manuscripts in peer-reviewed journals, to date
-- Reviewed 1 manuscript for a renowned peer-reviewed journal
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -68,7 +68,7 @@ Ames, Iowa
 
 2015 - Present
 
-Thesis: Small area estimation and visualization
+Thesis: Small area prediction and visualization – analysis of rainfall-erosion losses from cropland
 
 ### Iowa State University (ISU)
 
@@ -90,6 +90,32 @@ Wuhan, China
 
 Thesis: Cox proportional hazard model and its application in survival analysis
 
+Work Experience {data-icon=chart-area}
+--------------------------------------------------------------------------------
+
+### Visualization Analyst Intern
+
+Autodesk
+
+San Francisco, California
+
+2019 Summer
+
+- Guided sales by prioritizing potential customers using survival regression and association rules in R and Python
+- Delivered product-usage dashboards across the company in Power BI by centralizing data and designing a user-friendly interface
+- Developed pipelines to sync large data between database and dashboards in SQL and Python
+- Presented project results to stakeholders and senior leaders
+  
+<!-- ### Data Analyst Intern -->
+
+<!-- Gesellschaft für Konsumforschung -->
+
+<!-- Shanghai, China -->
+
+<!-- 2014 Summer -->
+
+<!-- - Prepared reports of sales data for customers in Excel, PowerPoint and in-house software -->
+
 Publication {data-icon=book}
 --------------------------------------------------------------------------------
 
@@ -104,34 +130,6 @@ Ames, Iowa
 Harms, T.M., Murphy, K.T., **Lyu, X.**, Patterson, S.S., Kinkead, K.E., Dinsmore, S.J. and Frese, P.W.
 
 
-Work Experience {data-icon=chart-area}
---------------------------------------------------------------------------------
-
-### Visualization Analyst Intern
-
-Autodesk
-
-San Francisco, California
-
-2019 Summer
-
-- Developed data pipelines using API, SQL and Python from data platform to dashboards
-- Improved, designed, and delivered SaaS business intelligence dashboards in Domo and Power BI
-- Prioritized potential customers using statistical models with R and Python codes
-- Presented project results to stakeholders and senior leaders
-  
-### Data Analyst Intern
-
-Gesellschaft für Konsumforschung
-
-Shanghai, China
-
-2014 Summer
-
-- Prepared sales reports for customers using Excel, PowerPoint and in-house software
-- Gained first-hand experience on market research and sales industry
-
-
 Research Experience {data-icon=user-graduate}
 --------------------------------------------------------------------------------
 
@@ -143,11 +141,10 @@ Ames, Iowa
 
 2016 - Present
 
-- Developed an R package to work with cropland database API
-- Developed one R Shiny app to be added to the Shiny user showcase soon
-- Integrated large spatial datasets for modelling and visualizing soil erosion in US
-- Developed data dashboards to visualize research results for the general audience
-- Obtained hands-on experience with cloud server, instance and database
+- Improved small area prediction of zero-inflated skewed data by developing Empirical Bayes predictor under a lognormal-logistic model with random effects
+- Delivered richer data products by integrating high-resolution spatial data in R and delivering interactive web interfaces in R Shiny
+- Informed land managers where to conserve bird species of conservation concern by applying the robust design occupancy modeling framework
+- Empowered farmers in decision-making using the data analysis results from on-farm research by developing an interactive web application in R Shiny and CSS
 - Presented research results in international conferences and group meetings
 
 
@@ -176,6 +173,8 @@ Ames, Iowa
 
 2019
 
+Selected for outstanding potential in statistical computing based on assistantship duties
+
 ### Student Travel Grant
 
 International Total Survey Error Workshop
@@ -183,6 +182,8 @@ International Total Survey Error Workshop
 Bergamo, Italy
 
 2019
+
+Selected as one of the student participants at the workshop based on paper presentation and curriculum vitae
 
 ### Holly and Beth Fryer Scholarship
 
@@ -192,6 +193,8 @@ Ames, Iowa
 
 2017
 
+Selected for high-achieving second-year graduate students based on academic success and performance in assistantship duties
+
 ### Vera David Award
 
 Department of Statistics, ISU
@@ -199,3 +202,5 @@ Department of Statistics, ISU
 Ames, Iowa
 
 2016
+
+Selected for high-achieving first-year female graduate students based on academic success
