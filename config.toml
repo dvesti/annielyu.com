@@ -226,17 +226,17 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "twitter.com/annielyu_stats"
+    link = "https://twitter.com/annielyu_stats"
 
   [[params.social]]
     icon = "linkedin-square"
     icon_pack = "fa"
-    link = "linkedin.com/in/annielyu"
+    link = "https://www.linkedin.com/in/annielyu/"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "github.com/XiaodanLyu"
+    link = "https://github.com/xiaodanLyu"
 
 
 # Navigation Links
