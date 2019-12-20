@@ -20,7 +20,7 @@ selected = true
 
 # Links (optional).
 url_slides = ""
-url_pdf = "/files/slides/Slides_ITSEW2019.pdf"
+url_pdf = "/slides/Slides_ITSEW2019.pdf"
 url_code = ""
 
 # Does the content use math formatting?

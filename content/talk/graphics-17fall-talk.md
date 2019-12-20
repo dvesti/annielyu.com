@@ -20,7 +20,7 @@ selected = false
 
 # Links (optional).
 url_pdf = ""
-url_slides = "/files/slides/Overlay_GWG_17fall.html"
+url_slides = "/slides/Overlay_GWG_17fall.html"
 url_video = ""
 url_code = ""
 

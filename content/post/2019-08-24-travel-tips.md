@@ -1,6 +1,8 @@
 ---
 title: 2019暑期游记
 author: Annie Lyu
+authors: 
+- admin
 date: '2019-08-24'
 slug: travel-europe
 categories:
@@ -32,17 +34,17 @@ header:
 
 接下来是三整天的会议，白天没有时间让我出去闲逛。会场在一个中世纪的教堂里面，这个遗迹现在被Bergamo大学拿来做教室（古建筑多就是任性）。教室里古老的壁画和现代的吊灯组合在一起给人一种时空交错的感觉。我一个晚上给实习的公司remotely搬砖，一个晚上参加了会议方安排的小镇tour加上social dinner。晚饭期间服务员非常精致地从葡萄酒:wine_glass:，小食，前菜，主食，甜点:cake:到咖啡:coffee:一轮一轮上菜的，每次都会更换餐具:fork_and_knife:，所以这顿晚饭我们吃了大概3到4个小时吧。。。
 
-<img style="float:left;border:0;width:300px" src="/img/gallery/bergamo_church.jpg" alt="church"/>
-<img style="border:0;width:400px" src="/img/gallery/bergamo_drawing.jpg" alt="drawing"/>
-<img style="border:0;width:400px" src="/img/gallery/bergamo_flower.jpg" alt="flower"/>
+<img style="float:left;border:0;width:300px" src="/img/europe/bergamo_church.jpg" alt="church"/>
+<img style="border:0;width:400px" src="/img/europe/bergamo_drawing.jpg" alt="drawing"/>
+<img style="border:0;width:400px" src="/img/europe/bergamo_flower.jpg" alt="flower"/>
 
 会议结束后的晚上也是我在Bergamo待的最后一个晚上，这个时候我时差也调整得差不多了终于可以好好逛逛这座小城啦。不像米兰的街道，这座小城非常整洁，i令人印象颇深的是街道旁盛开的美丽的鲜花:hibiscus:。城市的布局也很有意思，一条主道从火车站笔直地通到山脚再蜿蜒到山腰上的downtown。我惊喜得发现7欧买的72小时有效的公交票还可以坐往返山顶的有轨电车:trolleybus:。电车的轨道很漂亮，两边绿油油的植被显得十分清新。高低起伏的地势丝毫没有影响山上的建筑密度，民宅、教堂、学校、餐厅、酒吧、甜食店、纪念品商店、博物馆、露天广场等等应有尽有。大的车道是水泥路，小的车道是石板路，依山势而建的各家各户还用了很多石砖做建材。太阳下山以后从山顶望去的小镇夜景很迷人，特别是远处的层峦叠嶂。
 
-<img style="border:0" src="/img/gallery/bergamo.jpg" alt="bergamo"/>
+<img style="border:0" src="/img/europe/bergamo.jpg" alt="bergamo"/>
 
-<img style="float:left;border:0;width:350px" src="/img/gallery/bergamo_cablecar.jpg" alt="cablecar"/>
-<img style="border:0;width:350px" src="/img/gallery/bergamo_airport.jpg" alt="airport"/>
-<img style="border:0;width:350px" src="/img/gallery/view_intheair.jpg" alt="view_intheair"/>
+<img style="float:left;border:0;width:350px" src="/img/europe/bergamo_cablecar.jpg" alt="cablecar"/>
+<img style="border:0;width:350px" src="/img/europe/bergamo_airport.jpg" alt="airport"/>
+<img style="border:0;width:350px" src="/img/europe/view_intheair.jpg" alt="view_intheair"/>
 
 ### 第五天
 
@@ -50,31 +52,31 @@ header:
 
 飞机落地巴黎，按照阿金的建议我提前在网上买好了直达市中心的机场大巴的车票，到了机场找到候车的地方凭电子车票上车就可以了。虽然去市区也可以坐地铁，但相比没有电梯还要时时防盗的巴黎地铁，大巴显然是更好的选择。由于前天晚上睡眠时间实在太少在大巴上呼呼大睡的我错过了阿金的好几个电话，一直到汽车到站才惊醒过来。在阿金的电话指导下，我下了大巴找到最近的地铁站14.9欧买了10张套票（地铁公交通用）然后去坐1号线。到了站台面对全是法语标识的我再次一脸懵逼:flushed:完全无法确认地铁行驶的方向，忍不住吐槽巴黎作为一个著名旅游城市对不说法语的外国游客太不友好啦:joy:。还好旁边一个中国大姐刚好听见了我和阿金的电话谈话给我指了明路。巴黎地铁和美国部分公交一样车门不是自动开而是要乘客自己推开，一开始还不适应的我在车门前傻等良久。几经辗转我终于见到了阔别多年的好友:satisfied:，两人叙了一番旧下午阿金去公司上班前给我在google map上标记了好些个景点还帮我规划了路线:heart:，然后我便开始了巴黎暴走。
 
-<img style="float:left;border:0;width:300px" src="/img/gallery/eiffel_1.jpg" alt="eiffel_1"/>
-<img style="border:0;width:400px" src="/img/gallery/eiffel_2.jpg" alt="eiffel_2"/>
-<img style="border:0;width:400px" src="/img/gallery/triumphal.jpg" alt="triumphal"/>
+<img style="float:left;border:0;width:300px" src="/img/europe/eiffel_1.jpg" alt="eiffel_1"/>
+<img style="border:0;width:400px" src="/img/europe/eiffel_2.jpg" alt="eiffel_2"/>
+<img style="border:0;width:400px" src="/img/europe/triumphal.jpg" alt="triumphal"/>
 
 第一站就是鼎鼎大名的埃菲尔铁塔了，这塔果然就像传说中的那样，在市区哪个角落都能被看见。铁塔就在塞纳河边，事实上巴黎很多景点都在塞纳河边，比如我第二天去的巴黎圣母院、罗浮宫、奥赛博物馆等。塞纳河畔游人如织，河道上游船如梭，两边是整齐划一的米黄色等高建筑。其实小巴黎里面的居民楼和各大景点都是米黄色的建筑外观，各大著名景点里在周围的居民楼包围下并不是很显眼。除了香榭大道等一些主路，很多路都是狭窄拥挤的小巷，也有很多三叉路口，形成了蜘蛛网状的交通线路图。景点真的很集中，我沿着铁塔走了一小段就到了香榭大道，大道的尽头就是凯旋门。听阿金说除了埃菲尔铁塔，凯旋门游客也是可以上去的，排队上凯旋门的人一般比埃菲尔铁塔的人少很多。
 
-<img style="float:left;border:0;width:350px" src="/img/gallery/three-way-2.jpg" alt="three-way-2"/>
-<img style="border:0;width:350px" src="/img/gallery/seine.jpg" alt="seine"/>
-<img style="border:0;width:350px" src="/img/gallery/three-way-1.jpg" alt="three-way-1"/>
+<img style="float:left;border:0;width:350px" src="/img/europe/three-way-2.jpg" alt="three-way-2"/>
+<img style="border:0;width:350px" src="/img/europe/seine.jpg" alt="seine"/>
+<img style="border:0;width:350px" src="/img/europe/three-way-1.jpg" alt="three-way-1"/>
 
 ### 第六天
 
 对粉面有执念的我让阿金第一天晚上带我吃了越南米粉，第二天中午我们又去吃了一家有特色的拉面Kodawari Ramen:ramen:。听阿金说这家拉面店老板去日本学艺回来以后做了一些改良和创新，比如我们点的黑黑的黑芝麻味拉面^[一开始记成了墨鱼汁味，被阿金纠正过来了:stuck_out_tongue:]就很好吃。吃完饭阿金照例去公司上班我又开始了新的一天环塞纳河漫步。下了地铁我跟着导航寻找巴黎圣母院，到了之后难以置信得打开google map上认真对比了其他用户po的图才确认了眼前的建筑的确就是传说中的巴黎圣母院。犹记初中看同名小说那会想象巴黎圣母院是一幢宏伟高大的建筑，然而此时在我眼前的建筑是和周边的其他建筑齐平的而且似乎“平平无齐”。听说巴黎圣母院里面还是很壮观的，可惜当时它刚经历了失火事件所以暂停对外开放。我从侧面才远远观察到巴黎圣母院是占地面积大而不是以高度拔群。
 
-<img style="float:left;border:0;width:300px" src="/img/gallery/fr-ramen.jpg" alt="fr-ramen"/>
-<img style="border:0;width:400px" src="/img/gallery/fr-notre-dome.jpg" alt="fr-notre-dome"/>
-<img style="float:left;border:0;width:300px" src="/img/gallery/fr-souvenir.jpg" alt="fr-souvenir"/>
-<img style="border:0;width:400px" src="/img/gallery/fr-seine.jpg" alt="fr-seine"/>
+<img style="float:left;border:0;width:300px" src="/img/europe/fr-ramen.jpg" alt="fr-ramen"/>
+<img style="border:0;width:400px" src="/img/europe/fr-notre-dome.jpg" alt="fr-notre-dome"/>
+<img style="float:left;border:0;width:300px" src="/img/europe/fr-souvenir.jpg" alt="fr-souvenir"/>
+<img style="border:0;width:400px" src="/img/europe/fr-seine.jpg" alt="fr-seine"/>
 
 离开巴黎圣母院后我接着沿塞纳河行走，当时天公作美天气甚好风和日丽加上蓝天白云作为背景，让我忍不住感叹河边的景色真美随手一拍就是好风景。河边还有很多摆摊卖旅游纪念品的，那些纪念品甚是可爱配色和造型很是吸引我。到了卢浮宫，这占地面积把我惊呆了，我想象中的卢浮宫只有现实的不到十分之一大吧。诺大的艺术博物馆全是珍藏，真嫉妒法国人民呀。打卡了贝津铭的透明金字塔（博物馆入口），蜿蜒的排队入场队伍令我望而却步，不多的时间还是留给对面的奥赛博物馆好了。
 
-![louvre-pano](/img/gallery/fr-louvre-pano.jpg)
+![louvre-pano](/img/europe/fr-louvre-pano.jpg)
 
-<img style="float:left;border:0;width:280px" src="/img/gallery/fr-louvre-1.jpg" alt="fr-louvre-1"/>
-<img style="border:0;width:420px" src="/img/gallery/fr-louvre-2.jpg" alt="fr-louvre-2"/>
+<img style="float:left;border:0;width:280px" src="/img/europe/fr-louvre-1.jpg" alt="fr-louvre-1"/>
+<img style="border:0;width:420px" src="/img/europe/fr-louvre-2.jpg" alt="fr-louvre-2"/>
 
 到了奥赛博物馆，保安大哥拦住排队购票的我们说博物馆6点关门让大家等一下到了5点大家就可以免费参观不用买票了。然后发生了下面的对话：
 
@@ -98,9 +100,9 @@ header:
 
 奥赛里面很多梵高和莫奈等著名画家的真迹，包括梵高的一副自画像和莫奈的睡莲系列。一个小时也就只能让我走马观花看了一阵。偶然在博物馆窗户前瞅见对面山顶有一幢白色的很有特色的教堂（圣心大教堂），我心里想着没去成铁塔和凯旋门顶端能去一下山顶也不错呀（每到一个新的城市我总想去高处看一看:joy:）。没想到阿金下了班就径直带我去了:laughing:，我们爬到山顶俯瞰了一眼巴黎，和双子峰俯瞰到的旧金山不同，圣心大教堂看到的巴黎全景给我一种“拥挤”的感觉（也可能和当天阴沉的天气有关）。还好下山的时候有缆车，之前买的套票也能用，不然我是真的走不动啦。
 
-<img style="float:left;border:0;width:350px" src="/img/gallery/fr-sacre.jpg" alt="fr-sacre"/>
-<img style="border:0;width:350px" src="/img/gallery/fr-bread.jpg" alt="fr-bread"/>
-<img style="border:0;width:350px" src="/img/gallery/fr-macaron.jpg" alt="fr-macaron"/>
+<img style="float:left;border:0;width:350px" src="/img/europe/fr-sacre.jpg" alt="fr-sacre"/>
+<img style="border:0;width:350px" src="/img/europe/fr-bread.jpg" alt="fr-bread"/>
+<img style="border:0;width:350px" src="/img/europe/fr-macaron.jpg" alt="fr-macaron"/>
 
 
 爬山前我们一起去Le Creme de Paris吃了正宗的crepe。和我之前在美国Austin餐车吃过的不一样的是 店里做的饼皮更好吃而且份量超大（吃一份管饱的那种）。我们点了一份甜的（巧克力草莓）一份咸的（牛肉），个人感觉还是甜的比较好吃。

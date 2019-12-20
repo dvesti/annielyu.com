@@ -19,8 +19,8 @@ selected = true
 # projects = [""]
 
 # Links (optional).
-url_slides = "/files/slides/JSM2018Speed_Lyu/index.html"
-url_pdf = "/files/slides/JSM2018Poster_Lyu.pdf"
+url_slides = "/slides/JSM2018Speed_Lyu/index.html"
+url_pdf = "/slides/JSM2018Poster_Lyu.pdf"
 url_code = ""
 
 # Does the content use math formatting?

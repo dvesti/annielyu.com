@@ -1,41 +1,14 @@
 +++
-# About/Biography widget.
-widget = "about"
-active = true
-date = "2016-04-20T00:00:00"
+# About widget.
+widget = "about"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 1  # Order that this section will appear in.
 
-# Order that this section will appear in.
-weight = 5
+title = "Biography"
 
-# List your academic interests.
-[interests]
-  interests = [
-    "Statistical Computing",
-    "Data Visualization",
-    "Data Mining",
-    "Small Area Estimation"
-  ]
-
-# List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD in Statistics"
-  institution = "Iowa State University"
-  year = 2020
-  
-[[education.courses]]
-  course = "MSc in Statistics"
-  institution = "Iowa State University"
-  year = 2018
-
-[[education.courses]]
-  course = "BSc in Statistics"
-  institution = "Wuhan University"
-  year = 2015
- 
+# Choose the user profile to display
+# This should be the username of a profile in your `content/authors/` folder.
+# See https://sourcethemes.com/academic/docs/get-started/#introduce-yourself
+author = "admin"
 +++
-
-# Biography
-
-I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg.
-
-我叫吕孝丹，是美国爱荷华州立大学统计系在读博士生，本科毕业于武汉大学数学与统计学院。
