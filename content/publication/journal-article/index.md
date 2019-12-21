@@ -20,7 +20,7 @@ publishDate: "2017-03-16T00:00:00Z"
 slides: 
 summary: 
 tags:
-- Statistics
+- rstats
 title: Using landscape habitat associations to prioritize areas of conservation action for terrestrial birds
 url_code: ""
 url_dataset: ""

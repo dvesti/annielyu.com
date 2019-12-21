@@ -42,5 +42,5 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several R [Shiny](http://shiny.rstudio.com/) web applications in production. Navigate to the [Shiny](#shiny) tab to check them out! I enjoy programming, [traveling](/post/travel-europe/) and [baking](/post/showcase-my-home-made-dessert/).
+I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several R [Shiny](http://shiny.rstudio.com/) web applications in production. Navigate to the [Shiny](#shiny) tab to check them out! I enjoy programming, [traveling](/tags/travel/) and [baking](/tags/foodie/).
 

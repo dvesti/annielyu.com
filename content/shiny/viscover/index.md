@@ -1,5 +1,5 @@
 ---
-date: "2018-02-27"
+date: "2019-12-01"
 external_link: "https://lyux.shinyapps.io/viscover/"
 image:
   caption:
@@ -8,8 +8,7 @@ slides:
 summary: This is a shiny app tool designed for interacting with Cropland Data Layer and NRCS Soil Survey Data.
 tags:
 - shiny
-- web scraping
-- map
+- dataviz
 title: "viscover: visualize soil and crop data and their overlay"
 url_code: ""
 url_pdf: ""

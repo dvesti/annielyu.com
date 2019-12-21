@@ -16,12 +16,12 @@
 [[main]]
   name = "Posts"
   url = "#posts"
-  weight = 40
+  weight = 5
 
 [[main]]
   name = "Shiny"
   url = "#shiny"
-  weight = 50
+  weight = 10
   
 [[main]]
   name = "Gallery "

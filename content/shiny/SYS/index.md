@@ -1,5 +1,5 @@
 ---
-date: "2018-02-27"
+date: "2018-03-01"
 external_link: https://lyux.shinyapps.io/Stat421_Lab05_SYS/
 image:
   caption: 
@@ -7,6 +7,6 @@ image:
 summary: An example for Stat421 Lab05.
 tags:
 - shiny
-- survey
+- dataviz
 title: "Systematic Sampling Example"
 ---

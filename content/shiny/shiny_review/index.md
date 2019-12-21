@@ -1,5 +1,5 @@
 ---
-date: "2018-02-27"
+date: "2018-06-01"
 external_link: https://lyux.shinyapps.io/table_review/
 image:
   caption: 
@@ -7,6 +7,6 @@ image:
 summary: This is a shiny app tool designed for reviewing tables in Natural Resource Inventory reports.
 tags:
 - shiny
-- map
+- dataviz
 title: "iNtr: an interactive NRI table review tool"
 ---
