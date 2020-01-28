@@ -70,15 +70,15 @@ Ames, Iowa
 
 Thesis: Small area prediction and visualization – analysis of rainfall-erosion losses from cropland
 
-### Iowa State University (ISU)
+<!-- ### Iowa State University (ISU) -->
 
-Master of Science (M.S.) in Statistics
+<!-- Master of Science (M.S.) in Statistics -->
 
-Ames, Iowa
+<!-- Ames, Iowa -->
 
-2015 - 2018
+<!-- 2015 - 2018 -->
 
-Creative Component: Empirical Bayes small area prediction of sheet and rill erosion using a zero-inflated lognormal model
+<!-- Creative Component: Empirical Bayes small area prediction of sheet and rill erosion using a zero-inflated lognormal model -->
 
 ### Wuhan University (WHU)
 
@@ -106,15 +106,15 @@ San Francisco, California
 - Developed pipelines to sync large data between database and dashboards in SQL and Python
 - Presented project results to stakeholders and senior leaders
   
-<!-- ### Data Analyst Intern -->
+### Data Analyst Intern
 
-<!-- Gesellschaft für Konsumforschung -->
+Gesellschaft für Konsumforschung
 
-<!-- Shanghai, China -->
+Shanghai, China
 
-<!-- 2014 Summer -->
+2014 Summer
 
-<!-- - Prepared reports of sales data for customers in Excel, PowerPoint and in-house software -->
+- Prepared sales reports for customers in Excel, PowerPoint and in-house software
 
 Publication {data-icon=book}
 --------------------------------------------------------------------------------
