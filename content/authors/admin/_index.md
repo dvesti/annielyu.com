@@ -7,9 +7,6 @@ education:
   - course: PhD in Statistics
     institution: Iowa State University
     year: 2020
-  - course: MSc in Statistics
-    institution: Iowa State University
-    year: 2018
   - course: BSc in Statistics
     institution: Wuhan University
     year: 2015
