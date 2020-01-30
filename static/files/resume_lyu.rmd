@@ -18,20 +18,20 @@ Aside
 Contact Info {#contact}
 --------------------------------------------------------------------------------
 
-- <i class="fa fa-rss"></i> [annielyu.com](annielyu.com)
+- <i class="fa fa-rss"></i> [annielyu.com](https://annielyu.com)
 - <i class="fa fa-envelope"></i> annielyu8@gmail.com
-- <i class="fa fa-github"></i> [github.com/XiaodanLyu](github.com/XiaodanLyu)
-- <i class="fa fa-linkedin"></i> [linkedin.com/in/annielyu](linkedin.com/in/annielyu/) 
+- <i class="fa fa-github"></i> [github.com/XiaodanLyu](https://github.com/xiaodanLyu)
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/annielyu](https://www.linkedin.com/in/annielyu/) 
 
 
 Technical Skills {#skills}
 --------------------------------------------------------------------------------
 
-- R, Python, SQL, Github, Linux, C, SAS
+- R, Python, SQL
 
-- R Shiny, Power BI, Looker, Domo
+- Power BI, Looker, Domo
 
-- Statistical Learning, Data Visualization
+- Statistical Learning, Shiny development
 
 
 Disclaimer {#disclaimer}
@@ -53,8 +53,8 @@ Xiaodan Lyu {#title}
 
 - Worked on data science for over 7 years
 - Equipped with comprehensive statistical theories and methodologies
-- Developed one R Shiny app to be added to the R Shiny user showcase soon
-- Developed an R package to facilitate working with land use data API
+- Developed one R Shiny application included in the RStudio Shiny gallery
+- Developed an R package to webscrape and visualize NASS land use data and USGS soil data
 - Published 1 of 4 manuscripts in peer-reviewed journals, to date
 
 Education {data-icon=graduation-cap data-concise=true}
