@@ -53,7 +53,7 @@ Xiaodan Lyu {#title}
 
 - Worked on data science for over 7 years
 - Equipped with comprehensive statistical theories and methodologies
-- Developed one R Shiny application included in the RStudio Shiny gallery
+- Developed one R Shiny application featured in the RStudio Shiny gallery
 - Developed an R package to webscrape and visualize NASS land use data and USGS soil data
 - Published 1 of 4 manuscripts in peer-reviewed journals, to date
 
