@@ -25,11 +25,11 @@ I am so happy to share the news that my R Shiny app **viscover** is now featured
 
 <img style="border:0" src="/img/rstudio-message.png" alt="rstudio-message"/>
 
-Back when RStudio held [the first R Shiny contest](https://community.rstudio.com/t/shiny-contest-submission-viscover-visualize-soil-and-crop-data-and-their-overlay/25608)[^2] in the spring of 2019, I gave it a try and submitted my work **viscover**. Although I lost the contest, I received recognition from the RStudio and got invited to join the user showcase! :laughing: And on the first day of the RStudio conference 2020 in this January, RStudio published an updated look of the R Shiny gallery and **viscover** is now out there. It's a tremendous encourage to me and makes me so proud of myself! :dancer:
+Back when RStudio held [the first R Shiny contest](https://community.rstudio.com/t/shiny-contest-submission-viscover-visualize-soil-and-crop-data-and-their-overlay/25608)[^2] in the spring of 2019, I gave it a try and submitted my work **viscover**. Although I lost the contest, I received recognition from the RStudio and got invited to join the user showcase! :laughing: And on the first day of the RStudio conference 2020 in this January, RStudio published an updated look of the R Shiny gallery and **viscover** is now out there. It's a tremendous encouragement to me and makes me so proud of myself! :dancer:
 
 ## How I learned R Shiny
 
-It's in one of the [graphics group meetings](https://isu-graphics.rbind.io/) in the spring semester of 2016 at Iowa State University (ISU) that I learned R Shiny for the first time. [Eric Hare](https://erichare.me/)[^3] gave a great presentation introducing R Shiny. And he said some very appealing words which I quoted here.
+It's in one of the [graphics group meetings](https://isu-graphics.rbind.io/) in the spring semester of 2016 at Iowa State University (ISU) that I learned R Shiny for the first time. [Eric Hare](https://erichare.me/)[^3] gave a great presentation introducing R Shiny. And he said some very appealing words as I quoted here.
 
 > Shiny is a web development framework for turning an R analysis into an interactive website without any knowledge of HTML, Javascript, or CSS. Shiny apps are simple to write, but also can be incredibly capable. For those of you who haven’t used Shiny before, I highly recommend you check it out, as it opens up a whole world of possibilities for sharing an R analysis.
 
@@ -37,7 +37,7 @@ I learned some basics about R Shiny in that graphics group meeting. Afterwards, 
 
 ## How I got the chance to develop Shiny tools
 
-The following sections are a few short stories about my experiences in developing Shiny tools. If you're not interested, you can jump to [the last section](#resource) to check the recommended resources for learning and mastering Shiny. :triangular_flag_on_post:
+The following sections are a few short stories about my experiences in developing Shiny tools. If you're not interested, you can jump to [the last section](#resource) to check my recommendations for learning and mastering Shiny. :triangular_flag_on_post:
 
 #### Iowa DNR MSIM - SGCN Modeling
 
@@ -67,11 +67,11 @@ I started collaborating with Anabelle on developing ISOFAST in October 2017. Abo
 
 <iframe src="https://player.vimeo.com/video/332764810" width="640" height="347" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-The USDA-NRCS in a collaboration with CSSM released the 2015 Natural Resource Inventory (NRI) estimates in 2018. It is in the summer of 2018 that I developed another Shiny tool **iNtr** for CSSM. The motivation is to improve the efficiency of the NRI table review given the in-house methodology is too labor-intensive and puts too much cognitive load on the reviewers. The video demo shows an adapted version of the actual tool being used by NRI due to confidentiality of the true NRI data. But the two tools works in the same way in that they allow reviewers to quickly transit from one comparison to another and use color hues to highlight important table cells. As the old saying goes, difficult the first time, easy the second[^5]. :dart: My collaboration with the CSSM data analysts and the IT team this time was more and more efficient. With a history of nearly 40 years, the NRI database is nicely maintained. Therefore, little data cleaning needs to be done. I did take me a while to design a different data structure such that a "template" plot function could be used for any selected table. It turns out the NRI data analysts are quite satisfied with **iNtr**. Steve said **iNtr** is one of the biggest innovations of the 2015 NRI! And now **iNtr** is being used to help the table review of the 2017 NRI which is expected to be released in 2020.
+The USDA-NRCS in a collaboration with CSSM released the 2015 Natural Resource Inventory (NRI) estimates in 2018. It is in the summer of 2018 that I developed another Shiny tool **iNtr** for CSSM. The motivation is to improve the efficiency of the NRI table review given the in-house methodology is too labor-intensive and puts too much cognitive load on the reviewers. The video demo shows an adapted version of the actual tool being used by NRI due to confidentiality of the true NRI data. But the two tools works in the same way in that they allow reviewers to quickly transit from one comparison to another and use color hues to highlight important table cells. As the old saying goes, difficult the first time, easy the second[^5]. :dart: My collaboration with the CSSM data analysts and the IT team was more and more efficient. With a history of nearly 40 years, the NRI database is nicely maintained. Therefore, little data cleaning needs to be done. I did take me a while to design a different data structure such that a "template" plot function could be used for any selected table. It turns out the NRI data analysts are quite satisfied with **iNtr**. Steve said **iNtr** is one of the biggest innovations of the 2015 NRI! And now **iNtr** is being used to help the table review of the 2017 NRI which is expected to be released in 2020.
 
-## Some useful online resources <a name="resource"></a>
+## Some Shiny tips <a name="resource"></a>
 
-Okay, so far I have finished my personal stories with R Shiny. The following are some great resources for learning and working with R Shiny based on my own experience.
+Okay, so far I have finished my personal stories with R Shiny. For suggestions, I often check the Shiny Gallery to see what features are useful and learn from the source code. The following are some great resources for learning and working with R Shiny based on my own experience.
 
 - [Toturials by RStudio](https://shiny.rstudio.com/tutorial/) 
 
@@ -83,7 +83,37 @@ Okay, so far I have finished my personal stories with R Shiny. The following are
 
 - References for CSS/HTML/JS[^4]: [w3schools](https://www.w3schools.com/)
 
-Last but not least tip: I often check the Shiny Gallery to see what features are useful and learn from the source code. 
+For developing customer-facing Shiny tools such as **ISOFAST** and **iNtr**, I have followed several guidelines:
+
+1. Talk with the end-users first and get to know their expectation.
+
+1. Get to know the data, clean the data if necessary. A tidy and consistent data structure is half way to a successful Shiny tool.
+
+1. If the same copy of visual component is reproduced multiple times in the app for different datasets, it's advised to write a template plot function. This will not only improve your efficiency, but also make batch modification to the plots much easier.
+
+1. If the tool contains tons of information, a hierarchical table of content made with the `menubar` function in the package `shinydashboard` can be extremely helpful.
+
+1. Give the tool a demo and a test run, then collect feedback from the end-users and improve the details.
+
+1. If there is particular requirements for the plot theme (label, title, axis, digits, color scheme, ...) and the theme applies to many plots in the app, define global variables or functions for such themes. Below is an example code for using the same font for axis in **plotly** output.
+```r
+## plotly text font
+f.tick <- list(
+  size = 12,
+  family = "Times New Roman"
+)
+f.axis <- list(
+  size = 16,
+  family = "Times New Roman"
+)
+p %>% layout(
+  xaxis = list(title = "x-axis title",
+               tickfont = f.tick, titlefont = f.axis),
+  yaxis = list(title = "y-axis title", 
+               tickfont = f.tick, titlefont = f.axis))
+```
+
+Some of the principles are also applicable to dashboard development using commercial software such as Tableau and Power BI.
 
 [^1]: The cropland data layer is produced by the USDA-NRCS using moderate resolution satellite images and extensive validation. It's only available for the continuous United States at this moment and may subject to prediction error.
 [^2]: The second Shiny contest by RStudio is now open for submission. You can check the [RStudio community](https://community.rstudio.com/) for more information.
