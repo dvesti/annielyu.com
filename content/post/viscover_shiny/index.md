@@ -75,13 +75,15 @@ Okay, so far I have finished my personal stories with R Shiny. For suggestions, 
 
 - [Toturials by RStudio](https://shiny.rstudio.com/tutorial/) 
 
-- R packages for designing user interface: [shinydashboard](https://rstudio.github.io/shinydashboard/), [bootstraplib](https://rstudio.github.io/bootstraplib/)
+- R packages for designing user interface: [shinydashboard](https://rstudio.github.io/shinydashboard/), [shinyWidgets](http://shinyapps.dreamrs.fr/shinyWidgets/), [shinycssloader](https://github.com/andrewsali/shinycssloaders), [bootstraplib](https://rstudio.github.io/bootstraplib/)
 
 - R packages for making interactive plots/maps/tables: [plotly](https://plot.ly/r/), [leaflet](https://rstudio.github.io/leaflet/), [leaflet.extras](https://github.com/bhaskarvk/leaflet.extras), [DT](https://rstudio.github.io/DT/)
 
 - [Joe Cheng's talks on Shiny](https://resources.rstudio.com/authors/joe-cheng) 
 
 - References for CSS/HTML/JS[^4]: [w3schools](https://www.w3schools.com/)
+
+- Icon libraries: [fontawesome](https://fontawesome.com/)
 
 For developing customer-facing Shiny tools such as **ISOFAST** and **iNtr**, I have followed several guidelines:
 
