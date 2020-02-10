@@ -19,7 +19,7 @@ image:
 
 I am so happy to share the news that my R Shiny app **viscover** is now featured in the [RStudio Shiny Gallery](https://shiny.rstudio.com/gallery/viscover.html). :tada: :tada: :tada: It's categorized into the *Public Sector* section in the Gallery due to its application to the soil survey data and cropland data layer maintained by the USDA. **viscover** takes its name from <span style="color:green">**VI**</span>sulizing <span style="color:green">**S**</span>oil and <span style="color:green">**C**</span>rop data and their <span style="color:green">**OVER**</span>lay. Although my motivation to develop this app is to communicate how we integrate the two data sources for defining auxiliary variables for our small area estimation model. It can be fun to locate yourself using the app ([https://lyux.shinyapps.io/viscover/](https://lyux.shinyapps.io/viscover/)) and let **viscover** tell you what crops[^1] are around you! Believe it or not, It helps me satisfy my mom's curiosity when we were having a road trip in California and passing by a large orchard containing all types of fruit trees. :strawberry: :peach: :melon: :cherries: :grapes: :apple: :watermelon: And unsurprisingly, I find myself surrounded by large fields of corns and soybeans now in Ames, Iowa. :corn: :corn: :corn: :corn: :corn: :corn: :corn: Below is a short video showing what **viscover** can do. 
 
-<iframe src="https://player.vimeo.com/video/321794430" width="640" height="348" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+{{< vimeo 321794430 >}}
 
 ## How I promote "viscover" to RStudio Gallery
 
@@ -65,7 +65,7 @@ I started collaborating with Anabelle on developing ISOFAST in October 2017. Abo
 
 #### iNtr: an interactive NRI table review tool
 
-<iframe src="https://player.vimeo.com/video/332764810" width="640" height="347" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+{{< vimeo 332764810 >}}
 
 The USDA-NRCS in a collaboration with CSSM released the 2015 Natural Resource Inventory (NRI) estimates in 2018. It is in the summer of 2018 that I developed another Shiny tool **iNtr** for CSSM. The motivation is to improve the efficiency of the NRI table review given the in-house methodology is too labor-intensive and puts too much cognitive load on the reviewers. The video demo shows an adapted version of the actual tool being used by NRI due to confidentiality of the true NRI data. But the two tools works in the same way in that they allow reviewers to quickly transit from one comparison to another and use color hues to highlight important table cells. As the old saying goes, difficult the first time, easy the second[^5]. :dart: My collaboration with the CSSM data analysts and the IT team was more and more efficient. With a history of nearly 40 years, the NRI database is nicely maintained. Therefore, little data cleaning needs to be done. I did take me a while to design a different data structure such that a "template" plot function could be used for any selected table. It turns out the NRI data analysts are quite satisfied with **iNtr**. Steve said **iNtr** is one of the biggest innovations of the 2015 NRI! And now **iNtr** is being used to help the table review of the 2017 NRI which is expected to be released in 2020.
 
@@ -76,6 +76,11 @@ Okay, so far I have finished my personal stories with R Shiny. For suggestions, 
 - [Toturials by RStudio](https://shiny.rstudio.com/tutorial/) 
 
 - R packages for designing user interface: [shinydashboard](https://rstudio.github.io/shinydashboard/), [shinyWidgets](http://shinyapps.dreamrs.fr/shinyWidgets/), [shinycssloader](https://github.com/andrewsali/shinycssloaders), [bootstraplib](https://rstudio.github.io/bootstraplib/)
+
+- Resources for dashboard design: [Stephew Few](http://www.perceptualedge.com/), Hadley's tweet
+
+
+<center>{{< tweet 1133813298502279168 >}}</center>
 
 - R packages for making interactive plots/maps/tables: [plotly](https://plot.ly/r/), [leaflet](https://rstudio.github.io/leaflet/), [leaflet.extras](https://github.com/bhaskarvk/leaflet.extras), [DT](https://rstudio.github.io/DT/)
 
@@ -95,7 +100,7 @@ For developing customer-facing Shiny tools such as **ISOFAST** and **iNtr**, I h
 
 1. If the tool contains tons of information, a hierarchical table of content made with the `menubar` function in the package `shinydashboard` can be extremely helpful.
 
-1. Give the tool a demo and a test run, then collect feedback from the end-users and improve the details.
+1. Give the tool a demo and a test run, then collect feedback from the end-users and work on improving the details.
 
 1. If there is particular requirements for the plot theme (label, title, axis, digits, color scheme, ...) and the theme applies to many plots in the app, define global variables or functions for such themes. Below is an example code for using the same font for axis in **plotly** output.
 ```r
