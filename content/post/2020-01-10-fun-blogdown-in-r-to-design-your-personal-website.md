@@ -54,7 +54,7 @@ Everyone has his own taste, and the following steps show how I modify the templa
   
 #### Configure the website name
   1. Name it in your own way! Change `title` in the file `config.toml` and modify `description` in `config/_default/params.toml`.
-  1. If you'd like, you could personalize the URL of your site by modifying the `baseurl` in `config.toml`. But nothing comes free. :joy: I purchased my domain name (annielyu.com) from [Google Domains](domains.google). The registration fee costs me $12 per year. And you can add [Google Analytics](https://analytics.google.com/analytics/web/) to your site by setting the `google_analytics` to be `UA-ACCOUNTID-1` in `config/_default/params.toml`. Your Google Analytics account ID can be found at *setting -> admin -> account settings*.
+  1. If you'd like, you could personalize the URL of your site by modifying the `baseurl` in `config.toml`. But nothing comes free. :joy: I purchased my domain name (http://annielyu.com/) from [Google Domains](https://domains.google/). The registration fee costs me $12 per year. And you can add [Google Analytics](https://analytics.google.com/analytics/web/) to your site by setting the `google_analytics` to be `UA-ACCOUNTID-1` in `config/_default/params.toml`. Your Google Analytics account ID can be found at *setting -> admin -> account settings*.
   
 By the way, if you'd like to enable comments on your site, you can sign up an account on [Disqus](https://disqus.com/) and configure the `Comments` part in the file `config/_default/params.toml`.
   
