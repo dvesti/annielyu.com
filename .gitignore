@@ -2,6 +2,7 @@
 .RData
 .Ruserdata
 .DS_Store
+*.Rproj
 
 public/
 .Rproj.user/
