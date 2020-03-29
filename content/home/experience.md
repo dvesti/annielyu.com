@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Ames, Iowa"
   date_start = "2015-08-01"
   date_end = ""
-  description = """Conduct research on statistical methods.
+  description = """Develop statistical methodology and visualization tools at the Center of Survey Statistics and Methodology.
   """
 
 [[experience]]
@@ -34,6 +34,6 @@ date_format = "Jan 2006"
   location = "San Francisco, California"
   date_start = "2019-05-28"
   date_end = "2019-08-15"
-  description = """Develop data pipeline, data dashboards and statistical models for customer analytics."""
+  description = """Develop machine learning models and dashboards in the business analytics team."""
 
 +++
