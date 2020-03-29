@@ -12,9 +12,9 @@ education:
     year: 2015
 email: annielyu8@gmail.com
 interests:
-- Interactive Data Visualization
+- Data Visualization
 - Statistical Learning
-- Regression Models
+- Pastry and Photography
 name: Annie Lyu
 organizations:
 - name: Iowa State University
@@ -39,5 +39,5 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD candidate of statistics at Iowa State University. My advisors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several R [Shiny](http://shiny.rstudio.com/) web applications in production. Navigate to the [Shiny](#shiny) tab to check them out! I enjoy programming, [traveling](/tags/travel/) and [baking](/tags/foodie/).
+I am a PhD candidate of statistics at Iowa State University. My major professors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several customer-facing R [Shiny](#shiny) applications. I enjoy [programming](/tags/rstats/), [photographing](#gallery) and [dessert-making](/tags/foodie/).
 
