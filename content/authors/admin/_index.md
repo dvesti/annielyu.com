@@ -19,7 +19,7 @@ name: Annie Lyu
 organizations:
 - name: Iowa State University
   url: https://www.iastate.edu/
-role: PhD candidate of Statistics
+role: PhD candidate in Statistics
 social:
 - icon: envelope
   icon_pack: fas
@@ -39,5 +39,5 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD candidate of statistics at Iowa State University. My major professors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several customer-facing R [Shiny](#shiny) applications. I enjoy [programming](/tags/rstats/), [photographing](#gallery) and [dessert-making](/tags/foodie/).
+I am a PhD candidate in Statistics at Iowa State University. My major professors are [Dr. Heike Hofmann](http://hofmann.public.iastate.edu/) and Dr. Emily Berg. I consulted and contributed to several customer-facing R [Shiny](#shiny) applications. I enjoy [programming](/tags/rstats/), [photographing](#gallery) and [dessert-making](/tags/foodie/).
 
