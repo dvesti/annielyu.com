@@ -103,7 +103,7 @@ Now you've come a long way to collect all the fundamentals to buid your site. Th
 ```
 + As you may see it, `[Shiny](#shiny)` would create a hyperlink that would take site visitors to the `Shiny` section. The same logic applies to `tags` and `categories`. Below is part of the source code for my biography. And I bet you've seen how the hyperlinks work. If not, check it out! :laughing:
 ```
-I enjoy programming, [traveling](/tags/travel/) and [baking](/tags/foodie/).
+I enjoy [programming](/tags/rstats/), [photographing](#gallery) and [dessert-making](/tags/foodie/).
 ```
 + It's suggested to delete any non-customized files in the folders under `content` such as `courses` and `slides` so that the links to those files won't be accidentally exposed to visitors. By default, those files are searchable on the site and may appear in the `Related` section such as below a post.
 + Somehow the old way of making a foonote such as `^[here is a footnote]` is not working for a newer version of Hugo. Check their [new manual](https://www.markdownguide.org/extended-syntax/#footnotes) for guidance.
