@@ -15,7 +15,7 @@ image:
   preview_only: true
 ---
 
-个人网站上的第一篇中文博客献给值得纪念的2019年暑假， 响应谢老大的号召，[我网故我在](https://yihui.name/cn/2019/07/inner-peace/)。
+个人网站上的第一篇中文博客献给值得纪念的2019年暑假， 响应谢老大的号召，[我网故我在](https://yihui.org/cn/2016/12/student-project/)。
 
 ### 一个人的七天欧洲之旅
 
