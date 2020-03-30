@@ -26,10 +26,12 @@ Inspired by [David Robinson](http://varianceexplained.org/)'s [keynote talk](htt
 
 Well, there are a lot of useful references to check out. Here are a few of them that I would recommend. And you can always search by keyword in Yihui's [book on blogdown](https://bookdown.org/yihui/blogdown/) whenever you'd like to figure out how things work.
 
-- Yihui's video tutorial
+- Yihui Xie's video tutorial
 {{< youtube CjTLN-FXiFA >}}
-- [Weicheng's slides](http://slides.com/mingsnu/deck/#/)
-- [Slide sets from Alison Hill](https://summer-of-blogdown.netlify.com/)
+- [Weicheng Zhu's slides](http://slides.com/mingsnu/deck/#/)
+- [Alison Hill's set of slides](https://summer-of-blogdown.netlify.com/)
+- Daniel Quintana's [video](https://www.youtube.com/watch?v=ox_Ue9yzf-0) and [written](https://www.dsquintana.blog/free-website-in-r-easy/) tutorial
+- [Amber Thomas's blog post](https://amber.rbind.io/2016/12/19/website/#adding-a-blog-post-or-portfolio-piece)
 
 The whole process is actually pretty intuitive and quite straightforward if you use RStudio and are comfortable with R, git and markdown. For the following part of this post, I'll give some general guidelines and explain a few tricky steps (at least for me). Let's get ready to fire it up! :fire:
 
