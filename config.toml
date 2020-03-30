@@ -13,7 +13,7 @@ baseurl = "https://annielyu.com/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "&copy; [Xiaodan Lyu](/) 2018 - 2019"
+copyright = "Code with <i class='fas fa-heart'></i> and <i class='fab fa-r-project'></i> <a href='https://bookdown.org/yihui/blogdown/'>Blogdown</a><br>&copy; Annie Lyu, {year}"
 
 ############################
 ## Advanced options below ##
