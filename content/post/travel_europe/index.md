@@ -2,7 +2,7 @@
 title: 2019暑期游记
 author: Annie Lyu
 authors: 
-- admin
+- annielyu
 date: '2019-08-24'
 slug: travel-europe
 categories:

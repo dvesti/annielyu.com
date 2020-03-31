@@ -2,7 +2,7 @@
 title: Showcase my home-made dessert 
 author: Annie Lyu
 authors: 
-- admin
+- annielyu
 date: '2018-08-30'
 slug: showcase-my-home-made-dessert
 categories:

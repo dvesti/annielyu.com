@@ -2,7 +2,7 @@
 title: 'Fun Leaflet in R with NYC Squirrel Census Data'
 author: Annie Lyu
 authors: 
-- admin
+- annielyu
 date: '2019-10-29'
 slug: fun-leaflet-in-r-with-nyc-squirrel-census-data
 categories:

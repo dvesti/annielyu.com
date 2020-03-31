@@ -3,7 +3,7 @@ title: VISCOVER is now featured in the RStudio Shiny Gallery!
 subtitle: From beginner to developer - how I progress with R Shiny
 author: Annie Lyu
 authors: 
-- admin
+- annielyu
 date: '2020-02-04'
 slug: viscover-shiny
 categories:

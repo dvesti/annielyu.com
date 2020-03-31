@@ -2,7 +2,7 @@
 title: Gsoc 2018 test
 author: Annie Lyu
 authors: 
-- admin
+- annielyu
 date: '2018-08-29'
 slug: gsoc-2018-test
 categories:
