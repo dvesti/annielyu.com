@@ -1,5 +1,6 @@
 +++
 title = "Progress Report: Visualization of Sheet and Rill Erosion on US Cropland"
+slug = "cssm2019spring"
 date = 2019-02-13T12:10:00
 date_end = 2019-02-13T13:00:00
 abstract = "National Resource Inventory (NRI) is a longitudinal survey which monitors national resources on non-federal US land. It provides annual national and state-level estimates of average water erosion on cropland. Natural Resources Conservation Service (NRCS) did some primitive attempt to visualize sheet and rill erosion rates on US cropland every 5 years. Their maps represent a surface model based on a neighbor interpolation of all NRI sample sites. We'd like to improve on their work by producing annual maps with a predictive model based on data from NRI Pointgen, USGS Land Cover, and National Cooperative Soil Survey. The project is in progress and I'll show some of our experimental results."

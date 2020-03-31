@@ -1,5 +1,6 @@
 +++
 title = "Empirical Bayes Small Area Prediction of Sheet and Rill Erosion Using a Zero-Inflated Lognormal Model"
+slug = "jsm2018"
 date = 2018-07-31T14:00:00
 date_end = 2018-07-31T14:45:00
 abstract = "In the Conservation Effects Assessment Project (CEAP), some of the variables are skewed right and have zeros. We proposed an empirical Bayes (EB) estimator for the Zero-inflated Log-normal model. We are also able to approximate the variance of the estimator by estimating the conditional variance. A Monte Carlo simulation is conducted to show the empirical properties of the EB predictor and its efficiency gain over the Plugin and Zero-ignored Minimum Mean Squared Error estimator. We also applied the method to the CEAP data of South Dakota, where there are about 15% zeros among the observed RUSLE2. The proposed method is applied to get the predicted population mean of rainfall-erosion losses from cropland at the county level for South Dakota. For data analysis, we overlaid soil map shapefile and Cropland Data Layer raster in R to obtain a list of cropland map units for South Dakota, which is our target population for small area prediction. A Shiny app visualizing the overlaying procedure is developed."
