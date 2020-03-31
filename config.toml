@@ -80,4 +80,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 # Rules to generate permanent links of your pages
 [permalinks]
     post = "/:year/:month/:day/:slug/"
+    publication = "/publication/:slug/"
+    talk = "/talk/:slug/"
     
