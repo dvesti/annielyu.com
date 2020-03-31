@@ -2,7 +2,7 @@
 abstract: Utilizing data from a long-term monitoring program and land cover data sets, we modeled the probability of occupancy and colonization for 38 bird Species of Greatest Conservation Need (SGCN) in the robust design occupancy modeling framework, and used results from the best models to predict occupancy and colonization on the Iowa landscape.
 authors:
 - Tyler M. Harms, Kevin T. Murphy
-- admin
+- annielyu
 - Shane S. Patterson, Karen E. Kinkead, Stephen J. Dinsmore, Paul W. Frese
 date: ""
 doi: "10.1371/journal.pone.0173041"
@@ -22,6 +22,7 @@ summary:
 tags:
 - rstats
 title: Using landscape habitat associations to prioritize areas of conservation action for terrestrial birds
+slug: iowa-birds
 url_code: ""
 url_dataset: ""
 url_pdf: http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0173041&type=printable
