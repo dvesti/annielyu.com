@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Settle down a Personal Website</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Annie Lyu &amp; Anabelle Laurent" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Settle down a Personal Website
+## with <i class='fas fa-heart'></i> and R Blogdown
+### <span style="color:yellow">Annie Lyu &amp; Anabelle Laurent</span>
+### <br>Graphics Group Meeting <span class="citation">@ISU</span> <br> Workshop <span class="citation">@R-Ladies-Ames</span> <br><br>2020-04-03
+
+---
+
+
+
+# Why a personal website?
+
+- Be professional 👔
+
+  + [Some advice on managing your online presence - Hadley Wickham](https://twitter.com/hadleywickham/status/1189971594778681344)
+
+--
+
+- Autobiography 📖
+
+  + [I web, therefore I am. - Yihui Xie](https://bookdown.org/yihui/blogdown/)
+
+--
+
+- Learning and Sharing 🔈
+
+  + [The unreasonable effectiveness of public work - David Robinson](https://resources.rstudio.com/rstudio-conf-2019/the-unreasonable-effectiveness-of-public-work)
+  
+  + [Becoming an R blogger - Rebecca Barter](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
+
+--
+
+- Have fun programming and blogging! 😁
+
+  + [Twitter Threads vs Blogging - Yihui Xie](https://yihui.org/en/2017/08/twitter-threads-vs-blogging/)
+
+---
+
+&lt;body&gt;
+&lt;style type="text/css"&gt;
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+&lt;/style&gt;
+&lt;div id="content"&gt;
+&lt;iframe width="100%" height="100%" frameborder="0" src="https://annielyu.com/2020/01/12/blogdown-website/"/&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+---
+
+&lt;body&gt;
+&lt;style type="text/css"&gt;
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+&lt;/style&gt;
+&lt;div id="content"&gt;
+&lt;iframe width="100%" height="100%" frameborder="0" src="http://anabellelaurent.com/"/&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+---
+class: inverse
+
+background-image: url(https://media.giphy.com/media/mohhXPUdhVVoA/giphy.gif)
+background-size: 100%
+background-position: 50% 50%
+
+---
+# How to get it done?
+
+1. customize your content by modifying a template website -- &lt;span style="color:blue"&gt;lots of work&lt;/span&gt; 😅
+
+  + `install.packages("blogdown")`
+  
+  + `blogdown::install_hugo()`
+
+--
+
+1. custom domain name -- &lt;span style="color:blue"&gt;straightforward&lt;/span&gt; 😄
+
+  + Google Domains (.com, .org, .me) for a cost of $12 per year
+  
+  + Google Analytics (monitor website traffic for free)
+  
+--
+
+1. publish with GitHub and Netlify -- &lt;span style="color:blue"&gt;somewhat tricky&lt;/span&gt; 😣
+
+  + tell Netlify to continuously build and deploy your website from source
+  
+  + configure custom domain DNS
+
+---
+## RStudio and Website using blogdown 
+
+New Project `\(\rightarrow\)` New Directory `\(\rightarrow\)` Website using blogdown 
+
+&lt;center&gt;&lt;img src="images/blogdown-new-site.gif" style="width: 100%" /&gt;&lt;/center&gt;
+
+---
+## RStudio and Website using blogdown
+
+New Project `\(\rightarrow\)` New Directory `\(\rightarrow\)` Website using blogdown 
+
+![](images/start_annote.png)
+
+---
+background-image: url(images/serve_site.png)
+background-size: 100%
+background-position: 50% 50%
+
+---
+class: inverse
+
+## Your Turn (2min)
+
+- Create a new website using the RStudio dialog to set it up in a new project.
+
+  + pick a [hugo theme](https://themes.gohugo.io/) you like (we'll use hugo-academic as an example)
+
+- Live preview a website locally (Addins -&gt; Serve Site).
+
+---
+## File structure (VERY IMPORTANT!!!)
+
+- configuration: &lt;span style="color:blue"&gt;a few site settings to go through&lt;/span&gt;
+
+  + config.toml
+
+  + config/_default/*.toml `\(\Rightarrow\)` languages, menus, params
+
+--
+
+- content: &lt;span style="color:blue"&gt;mostly markdown files&lt;/span&gt;
+
+  + home/*.md -- homepage widgets
+
+  + authors/admin -- your biography
+  
+  + post, talk, project, publication -- your achievements 💯  
+
+--
+
+- static: &lt;span style="color:blue"&gt;self imported files&lt;/span&gt;
+
+  + images, slides, resume, etc. 
+
+--
+
+- &lt;mark&gt;**DO NOT TOUCH**&lt;/mark&gt;: public, resources, themes
+
+---
+## Homepage Widgets (content/home)
+
+&lt;center&gt;&lt;img src="images/content_folder.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+---
+## Homepage Widgets (content/home) 
+
+- `active = true`: keep widget; `active = false`: discard widget
+
+- `weight`
+
+  + display order (small weight shows first)
+  
+  + works in the same way for both &lt;span style='color:blue'&gt;homepage widgets&lt;/span&gt; and &lt;span style='color:blue'&gt;navigation bar menus&lt;/span&gt;
+
+For example, `content/home/accomplishments.md`
+
+```yaml
++++
+# Accomplishments widget.
+widget = "accomplishments"  
+headless = true  # This file represents a page section.
+active = false  # Activate this widget? true/false
+weight = 50  # Order that this section will appear.
+```
+
+---
+## Biography (content/authors/admin)
+
+- folder name **admin** can be replaced with a customized user name
+
+- edit `authors/admin/_index.md` to introduce yourself
+
+- replace `authors/admin/avatar.jpg` with your profile picture
+
+&lt;center&gt;&lt;img src="images/authors_admin.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+---
+## Biography (content/authors/admin/_index.md) 
+
+&lt;center&gt;&lt;img src="images/authors_admin_index.png" style="width: 80%" /&gt;&lt;/center&gt;
+
+---
+## Resources - icons <i class="fab  fa-r-project "></i>
+
+- `"&lt;i class="fab fa-r-project"&gt;&lt;/i&gt;"` versus `"r icon::fa('r-project')"`
+
+- [Fontawesome](https://fontawesome.com/icons?d=gallery)
+
+![](images/icons.png)
+
+---
+class: inverse
+
+## Your turn (2min)
+
+- Fill in your information (at least name, organization and role)
+
+Optional
+
+- Activate/deactivate the sections (widgets) on the homepage
+
+- Rearrange the section orders however you like
+
+---
+## Create a new R Markdown post (content/post)
+
+- use the **New Post** Addin (or run `blogdown::new_post(ext = '.Rmd')`)
+
+&lt;center&gt;&lt;img src="images/new-post.gif" style="width: 100%" /&gt;&lt;/center&gt;
+
+---
+## Create a new R Markdown post (content/post)
+
+&lt;mark&gt;**Do not knit**&lt;/mark&gt; your post, instead
+
+  + use the **Serve Site** Addin to preview your post, or
+  
+  + refresh preview
+  
+In YAML header,
+
+  + `draft:TRUE` `\(\Rightarrow\)` preview an R markdown post
+
+  + `draft:FALSE` `\(\Rightarrow\)` ready to deploy a post
+
+---
+## Resources - Highlight (config/_default/params.toml)
+
+- [Styles](https://highlightjs.org/static/demo/)
+
+&lt;!-- - activate `highlight = true` and write down your style `highlight_style = "arta"` --&gt;
+
+```yaml
+highlight = true
+highlight_languages = ["r"]  
+highlight_style = "arta" 
+```
+
+&lt;center&gt;&lt;img src="images/highlight.png" style="width: 100%" /&gt;&lt;/center&gt;
+
+---
+## Resources - Emoji 😎
+
+- `":sunglasses:"` versus `"r emo::ji('sunglasses')"`
+
+- [Cheat sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
+
+![](images/emoji.png)
+
+---
+
+## Resources - Shortcodes
+
+- [Hugo's Build-in Shortcodes](https://gohugo.io/content-management/shortcodes/)
+
+- `{{&lt; youtube CjTLN-FXiFA &gt;}}`
+
+&lt;center&gt;&lt;iframe width="680" height="383" src="https://www.youtube.com/embed/CjTLN-FXiFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+
+---
+## Import files (static)
+
+For image not created from your R Markdown file, you should
+ 
+ + add image to the `static/img` folder
+ 
+ + insert your image using `![alternate-text](img/xx.png)`
+
+--
+
+Any files in the `static` folder can be referred using similar relative path!
+
+--
+
+Follow the following steps to link your resume to the navigation bar:
+
+1. add your resume to the `static/files` folder
+
+1. Specify the URL to your resume in `config/_default/menus.toml`
+
+```yaml
+ [[main]]
+    name = "Resume" # displayed text
+    url = "files/resume.pdf"
+    weight = 70
+```
+
+---
+## About hyperlink
+
+- relative path will be after your domain name (e.g., `https://xxx.com/`),
+
+  + homepage section (widget): `[text](#posts)`
+  
+  + tags: `[text](tags/rstats)`
+  
+  + categories `[text](categories/r)`
+  
+--
+  
+- DO NOT leave out prefix `https://` when directing visitor to external webpages.
+
+--
+
+- Recommended practice for generating permanent links in `config.toml`
+
+  + `slug` serves as a short page ID
+  
+  + URL won't change as you move around or rename file/folder
+  
+```yaml
+# Rules to generate permanent links of your pages
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    publication = "/publication/:slug/"
+    talk = "/talk/:slug/"
+```
+
+---
+## Create a new publication (content/publication)
+
+&lt;center&gt;&lt;img src="images/publication.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+---
+## Create a new publication (content/publication)
+
+Per publication folder, you need
+
+  + a Markdown file `index.md`
+  + an optional featured image `featured.png` 
+  + an optinal citation `cite.bib` 
+
+&lt;center&gt;&lt;img src="images/publication_markdown.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+---
+class: inverse
+
+## Your Turn (2min)
+
+- Create a "hello world" post
+
+- Preview your post
+
+Optional
+
+- Try inserting 
+
+  + code chunk
+  
+  + emoji
+  
+  + icon 
+  
+  + image
+  
+  + hyperlink to internal pages
+
+---
+## Additional Site configurations
+
+- `config/_default/params.toml`
+
+  + your contact information (if you activate `content/home/contact.md`)
+
+  + site name and description `\(\rightarrow\)` `title` and `description`
+
+  + custom domain and Google analytics `\(\rightarrow\)` `baseurl` and `google_analytics`
+
+  + active comments `\(\rightarrow\)` `comments`
+
+- `config.toml`
+
+  + enable emoji `\(\rightarrow\)` `enableEmoji = true`
+
+  + activate Chinese/Japanese/Korean languages `\(\rightarrow\)` `hasCJKLanguage = true`
+
+---
+## Deploy with Netlify and GitHub
+
+- Push your repository to [GitHub](https://github.com/)
+
+  + can be private and ignore the `public` folder
+
+--
+
+&lt;center&gt;&lt;img src="images/netlify-deploy.gif" style="width: 100%" /&gt;&lt;/center&gt;
+
+---
+class: middle, center
+
+## Thank you <i class="fas  fa-heart "></i>
+
+&lt;center&gt;&lt;img src="images/pod.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+I get out of my pod 😆
+
+---
+count: false
+class: middle, center, inverse
+
+## Appendix
+
+---
+count: false
+## Resources - citation
+
+- use **bibtex** format. Open `cite.bib` on **BibDesk**
+
+&lt;center&gt;&lt;img src="images/BibDesk.png" style="width: 90%" /&gt;&lt;/center&gt;
+
+---
+count: false
+
+## Public GitHub Repositories of Blogdown Website
+
+- [Yihui Xie](https://github.com/yihui/yihui.org)
+
+- [Alison Hill](https://github.com/rbind/apreshill)
+
+- [Amber Thomas](https://github.com/ProQuestionAsker/websiteSource)
+
+- [Annie Lyu](https://github.com/XiaodanLyu/annielyu.com)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

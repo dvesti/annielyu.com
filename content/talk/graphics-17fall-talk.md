@@ -6,7 +6,7 @@ date_end = 2017-10-26T17:00:00
 abstract = "In this talk, I'll demo a shiny application, which uses publicly available databases on soils (soils map and cropland data layer) to: (1) do intersection between mapunit polygons and CDL raster; (2) get CDL pixel counts for each group of overlaid polygons. I'll give some introduction to the soils data and R packages/functions for manipulating and plotting spatial objects."
 abstract_short = ""
 event = "Graphics Group Meeting"
-event_url = ""
+event_url = "https://isu-graphics.rbind.io/"
 location = "Ames, Iowa"
 
 # Is this a selected talk? (true/false)
