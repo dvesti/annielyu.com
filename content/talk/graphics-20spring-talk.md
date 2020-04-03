@@ -21,7 +21,7 @@ selected = false
 url_pdf = ""
 url_slides = "slides/ISUGG/blogdown_AA.html"
 url_video = ""
-url_code = ""
+url_code = "https://rstudio.cloud/project/1084789"
 
 # Does the content use math formatting?
 math = true
