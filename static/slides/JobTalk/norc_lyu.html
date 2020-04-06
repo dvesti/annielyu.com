@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Small Area Estimation and Visualization Tool</title>
+    <meta charset="utf-8" />
+    <meta name="author" content=" Xiaodan Lyu  Joint work with Emily Berg, Heike Hofmann   Department of Statistics, Iowa State University" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# <font color='white'>Small Area Estimation and Visualization Tool</font>
+## <font color='white'>for the Conservation and Effect Assessment Project</font>
+### <br><b>Xiaodan Lyu</b><br><br>Joint work with Emily Berg, Heike Hofmann<br><br><br>Department of Statistics, Iowa State University
+### <br>NORC at the University of Chicago <br> March 16, 2020
+
+---
+
+
+
+
+
+
+
+
+## Introduction
+
+1. Response variable: (1) &lt;font color='blue'&gt;lots of zeros&lt;/font&gt;; (2) &lt;font color='blue'&gt;right skewed&lt;/font&gt;
+
+1. We develop an &lt;font color='blue'&gt;optimal&lt;/font&gt; predictor under a small area estimation model.
+
+--
+
+1. Data analysis shows: (1) our model assumption is &lt;font color='blue'&gt;reasonable&lt;/font&gt;; (2) our predictor is &lt;font color='blue'&gt;much more precise&lt;/font&gt; than the direct estimator.
+
+--
+
+1. We obtain &lt;font color='blue'&gt;auxiliary information&lt;/font&gt; from two administrative data sources.
+
+1. &lt;font color='blue'&gt;VISCOVER&lt;/font&gt;, an interactive visualization tool to explore large-scale and complex spatial data.
+
+???
+1. The numeric challenge in obtaining a consistent parameter estimator is addressed by deriving the full maximum likelihood function.
+1. For a linear model, the population mean of the covariate for each area is sufficient.
+
+---
+
+## Conservation and Effect Assessment Project (CEAP)
+
+&lt;center&gt;&lt;img src="images/CEAP_diagram.png" style="width: 80%" /&gt;&lt;/center&gt;
+
+&lt;small&gt;
+- On-site farmer surveys of cropland and pastureland about crop management and conservation practice&lt;br&gt;&lt;br&gt;
+- Conducted between 2003 and 2006 through collaboration between USDA Natural Resources Conservation Service (NRCS) and ISU Center of Survey Statistics and Methodology (CSSM)
+&lt;/small&gt;
+
+---
+## CEAP Cropland Assessment 
+
+&lt;small&gt;Parameter of interest: county-level average soil erosion rates from &lt;span style="color: blue;"&gt;crop&lt;/span&gt; fields&lt;/small&gt;
+
+![](images/HUC2Digit.png)
+&lt;small&gt;Figure: Map of 2-digit hydrologic units (black line) versus counties in South Dakota (dark brown area).&lt;/small&gt; 
+
+---
+## Small Area Estimation - Basic Setting
+
+&lt;small&gt;
+- Primary interest: estimates for small domains (areas)
+- Use model to incorporate auxiliary information known for the whole population&lt;/small&gt;
+
+![](images/sd_sample_size.png)
+&lt;small&gt;Figure: Choropleth map of the sample size for each county in South Dakota, CEAP Cropland.&lt;/small&gt;
+
+???
+
+Standard survey estimators are often unreliable given small sample sizes. (Rao, Molina, 2015)
+
+---
+## CEAP Cropland RUSLE2 in South Dakota
+
+RUSLE2 `\(\Rightarrow\)` soil erosion in tons/year
+  
+![](images/RUSLE2_hist.png)
+
+&lt;small&gt;Figure: Histogram of RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
+
+---
+count: false
+
+## CEAP Cropland RUSLE2 in South Dakota
+
+RUSLE2 `\(\Rightarrow\)` soil erosion in tons/year
+  
+![](images/RUSLE2_hist_annotated.png)
+
+&lt;small&gt;Figure: Histogram of RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
+
+---
+## Small Area Estimation - Existing Methods
+
+- Linear mixed effects models with symmetric error distributions (Fay III and Herriot, 1979; Battese, Harter, and Fuller, 1988)
+
+- Skewed responses contaminated with zeros:  
+
+  + Hierarchical Bayesian method under a zero-inflated gamma model (Dreassi, Petrucci, and Rocco, 2014)
+  
+  + "Plug-in" method under a zero-inflated lognormal model (Chandra and Chambers, 2016)
+  
+--
+  
+  + Issues: (1) implicitly assume &lt;mark&gt;independence&lt;/mark&gt; between two parts; (2) lack &lt;mark&gt;optimality&lt;/mark&gt;
+
+???
+- Related work:
+
+  + Empirical Bayes method under a lognormal mixed effects model (Berg and Chandra, 2014)
+
+---
+## CEAP Cropland RUSLE2 in South Dakota
+
+&lt;center&gt;&lt;img src="images/scatter_cor.png" style="width: 70%" /&gt;&lt;/center&gt;
+
+&lt;small&gt;Figure: Scatter plot of proportion of positive RUSLE2 measurements versus average of positive RUSLE2s in log scale for counties in South Dakota, CEAP Cropland&lt;/small&gt; 
+
+---
+## Model Assumption - zero-inflated lognormal
+
+Suppose response `\({y}_{ij}^*\)` of `\(j_{\rm{th}}\)` location in county `\(i\)` satisfies `\(\color{blue}{{y}_{ij}^*=y_{ij}\delta_{ij}}\)`
+
+- &lt;span style="color: blue;"&gt;Positive part&lt;/span&gt;: `\(y_{ij}&gt;0\)`, &lt;mark&gt;skewed right erosion&lt;/mark&gt;
+`$$\log(y_{ij})=\beta_0+\mathbf{z}'_{1,ij}\boldsymbol{\beta}_1+u_i+e_{ij}$$`
+where `\(e_{ij} \overset{i.i.d}{\sim} N(0, \sigma^2_e)\)`.
+
+--
+
+- &lt;span style="color: blue;"&gt;Binary part&lt;/span&gt;: `\(\delta_{ij}\sim\text{Bernoulli}(p_{ij})\)`, `\(\delta_{ij}=0\)` means &lt;mark&gt;zero erosion&lt;/mark&gt;
+`$$g(p_{ij})=\alpha_0+\mathbf{z}_{2,ij}'\boldsymbol\alpha_1+b_i$$`
+where `\(g(\cdot)\)` is a parametric link function to be specified.
+
+---
+## Model Assumption - correlated random effects
+
+`$$\left(\begin{array}{c} u_{i} \\ b_{i}\end{array}\right) \stackrel{iid}{\sim}  \mbox{BVN}(\boldsymbol{0}, \boldsymbol{\Sigma}_{ub}), \boldsymbol{\Sigma}_{ub} = \begin{pmatrix}\sigma_u^2 &amp; \color{blue}{\rho}\sigma_{u}\sigma_{b}\\\color{blue}{\rho}\sigma_{u}\sigma_{b} &amp; \sigma_b^2 \end{pmatrix}$$`
+
+- `\(\sigma_u^2, \sigma_b^2\)` `\(\Rightarrow\)` between-county variance.
+
+- `\(\rho \in (-1, 1) \Rightarrow\)` correlation between `\(u_i\)` and `\(b_i\)`.
+  
+???
+
++ Bayesian approach of Pfeffermann, Terryn, and Moura (2008) `\(\Rightarrow\)` requires specifying prior distributions
+
+---
+class: center, middle, inverse
+
+# Empirical Bayes Predictor &lt;br&gt;&lt;br&gt; under Zero-inflated Lognormal Model &lt;br&gt;&lt;br&gt; with Correlated Random Effects
+
+---
+## Optimal (MMSE) Predictor 
+
+.pull-left[
+&lt;img src="images/mmse_diagram.png" style="width: 100%"/&gt;
+]
+
+.pull-right[
+&lt;br&gt;&lt;small&gt;
+Denote:
+
+Data in hand: `\(({\boldsymbol{y}_s}, {\boldsymbol{z}})\)`
+
+Parameter of Interest: `\(h({\boldsymbol{y}})\)`
+
+Unknown model parameter: `\(\boldsymbol{\theta}\)`
+&lt;/small&gt;
+]
+
+&lt;small&gt;
+- For any predictor of `\(h(\boldsymbol{y})\)` denoted as `\(f(\boldsymbol{y}_s, \boldsymbol{z})\)`,
+`$$E_\theta(h(\boldsymbol{y})-f(\boldsymbol{y}_s, \boldsymbol{z}))^2 \geq E_\theta[h(\boldsymbol{y})-\color{blue}{E_\theta(h(\boldsymbol{y})|\boldsymbol{y}_s,\boldsymbol{z})}]^2$$`
+- The &lt;font color='blue'&gt;conditional expectation&lt;/font&gt; is "closer" to the population parameter than &lt;mark&gt;any other functions&lt;/mark&gt; of the observed data!
+&lt;/small&gt;
+
+---
+## Optimal (MMSE) Predictor
+
+.pull-left[
+#### Challenges
+- Correlation between two parts &amp; bivariate integration
+
+- No "easy" closed-form expression for condition mean
+]
+
+--
+
+.pull-right[
+#### Approach
+- Express MMSE predictor as univariate integral `\(\Rightarrow\)` easy to compute
+
+- Derive required conditional mean in 3 steps
+]
+
+---
+## Optimal (MMSE) Predictor
+
+Step 1: `\(u_i|\color{blue}{b_i}, \boldsymbol{y}^*_{s_i} \overset{ind}{\sim} N(\gamma_i\bar{\tilde{r}}_i+(1-\gamma_i)\rho\frac{\sigma_u}{\sigma_b}{b_i}, \tilde{\sigma}^2_{u_i})\)`
+
+--
+
+Step 2: `\([b_i|\boldsymbol{y}_{s_i}^*] \propto \pi_{s_i}(b_i)\phi(\frac{b_i-m_i}{\sqrt{v_i}})\)`
+
+--
+
+Step 3: `\(\color{blue}{E_{\boldsymbol\theta}(y_{ij}^*|\boldsymbol{y}_{s_i}^*)} = c_{ij}(\boldsymbol\theta)E_{\boldsymbol\theta}(p_{ij}(b_i){\eta(b_i)}|\boldsymbol{y}_{s_i}^*), j \not\in s_i\)`
+where `$$c_{ij}(\boldsymbol\theta) = \underbrace{\exp(\beta_0+x_{ij}'\beta_1+{\gamma_i}\bar{\tilde{r}}_i + \tilde{\sigma}_{u_i}^2/2+\sigma_e^2/2)}_{\text{first moment of lognormal distribution}}$$` and `\(\eta(b_i)=\exp((1-\gamma_i){\rho}\sigma_u/\sigma_b b_i).\)`
+
+.footnote[
+&lt;small&gt;**Reference**: **Lyu, X.**, Berg, E. and Hofmann H. Empirical bayes small area prediction of sheet and rill erosion under a zero-inflated lognormal model. Submitted.&lt;/small&gt;]
+
+---
+
+#### Computing notes:
+
+Recall that `$$[b_i|\boldsymbol{y}_{s_i}^*] \propto \pi_{s_i}(b_i)\phi(\frac{b_i-m_i}{\sqrt{v_i}})$$`
+
+Approximate conditional expectation `\(E_{\boldsymbol\theta}(q_{ij}(b_i)|\boldsymbol{y}_{s_i}^*)\)` for arbitrary function `\(q_{ij}(\cdot)\)` by
+
+1. Simulate `\(\{b_i^{(r)}: r=1,\ldots,R\}\)` from `\(N(m_i, v_i)\)`
+
+1. Calculate Monte Carlo approximation `$$\hat{E}_{\boldsymbol\theta}(q_{ij}(b_i)|\boldsymbol{y}_{s_i}^*)=\frac{\frac{1}{R}\sum_{r=1}^R\color{blue}{\pi_{s_i}(b_i^{(r)})}q_{ij}(b_i^{(r)})}{\frac{1}{R}\sum_{r=1}^R\color{blue}{\pi_{s_i}(b_i^{(r)})}}$$`
+
+---
+## Empirical Bayes (EB) Predictor
+
+Denote:
+- area population mean: `\({\zeta_{i}} = \frac{1}{N_i}\sum_{j=1}^{N_i}y_{ij}^*\)`
+- a consistent estimator of model parameter: `\(\hat{\boldsymbol \theta}\)`
+
+Then:
+- Optimal (MMSE) predictor:
+`$$\hat\zeta_{i}^{\rm{MMSE}}=\frac{1}{N_i}\Big\{\sum_{j \in s_i} y_{ij}^* + \sum_{j \in \bar s_i}\hat{y}_{ij}^{*\rm{MMSE}}\Big\}$$`
+where `\(\hat{y}_{ij}^{*\rm{MMSE}} = E_{\boldsymbol\theta}(y_{ij}^*|\boldsymbol{y}^*_{s_i})\)`
+
+- &lt;mark&gt;Empirical Bayes&lt;/mark&gt; (EB) predictor:
+`\(\hat \zeta_{i}^{\rm{EB}} = \hat\zeta_{i}^{\rm{MMSE}}(\color{blue}{\hat{\boldsymbol\theta}})\)`
+
+???
+In this case, the EB approach is essentially frequentist.
+
+---
+## Model Parameter Estimation
+
+How to estimate `\(\boldsymbol\theta = (\boldsymbol\beta', \boldsymbol\alpha', \sigma^2_u, \sigma^2_b, \sigma^2_e, \rho)'\)`? 💡
+
+--
+
+**Maximum likelihood estimation**!
+
+- Full likelihood function: `\(L(\boldsymbol\theta) = \prod_{i=1}^DL_i(\boldsymbol\theta)\)` where
+`$$\begin{eqnarray}L_i(\boldsymbol\theta) &amp;=&amp; \frac{(1-\gamma_i)^{1/2}(v_i/\sigma_b^2)^{1/2}}{(2\pi\sigma_e^2)^{\tilde{n}_i/2}}\exp(\frac{\gamma_i\bar{\tilde{r}}_i^2}{2\sigma_e^2/\tilde{n}_i} + \frac{m_i^2}{2v_i}-\frac{\sum_j\tilde{r}_{ij}^2}{2\sigma_e^2}) \\ &amp;&amp; \int \pi_{s_i}(b_i)\frac{1}{\sqrt{v_i}}\phi(\frac{b_i-m_i}{\sqrt{v_i}})\mathrm{d}b_i\end{eqnarray}$$`
+
+- The maximum likelihood estimator (MLE) of `\(\boldsymbol\theta\)` maximizes the target function above.
+
+- MLE has good statistical properties.
+
+???
+**Remark**:
+
+  + A good starting value and close-formed gradient vector `\(\partial L/\partial\boldsymbol\theta\)` help `optim` find the maximum likelihood estimate (MLE) much faster.
+  
+  + MLE-based statistical inferences can be made by inverting observed information matrix. 
+
+1. allows inference for simultaneous confidence interval or hypothesis test
+1. profiling out `\(\rho\)` takes much longer time to find the MLE
+
+---
+## Mean Squared Error (MSE) Estimator
+
+&lt;center&gt;&lt;img src="images/EB_M1M2_diagram.png" style="width: 50%" /&gt;&lt;/center&gt;
+
+Mean Squared Error (MSE) of the EB predictor (Rao and Molina, 2015 p.141-142):
+`$$\rm{MSE}(\hat\zeta_{i}^{EB}) = M_{1i}(\boldsymbol\theta) + M_{2i}(\boldsymbol\theta)$$`
+
+---
+## Mean Squared Error (MSE) Estimator
+
+.pull-left[
+`\(M_{1i}(\boldsymbol\theta)=E(\hat\zeta_{i}^{\rm{MMSE}}-\zeta_{i})^2\)`
+
+- "Leading term"
+
+- Depends on `\(\boldsymbol{\theta}\)`
+
+- Not `\(\downarrow\)` as number of areas `\(\uparrow\)`
+
+- Closed-form!
+
+]
+
+--
+
+.pull-right[
+`\(M_{2i}(\boldsymbol\theta)=E(\hat\zeta_{i}^{\rm{EB}}-\hat\zeta_{i}^{\rm{MMSE}})^2\)`
+
+- Depends on variance of `\(\hat{\boldsymbol\theta}\)`
+
+- `\(\downarrow\)` as number of areas `\(\uparrow\)`
+
+- Bootstrap estimates
+
+]
+
+--
+
+&lt;br&gt;
+&lt;mark&gt;One-Step&lt;/mark&gt; MSE estimator:
+`$$V_{\color{blue}{\hat{\boldsymbol\theta}}}(\zeta_{i}|\boldsymbol{y}_{s_i}^*) = \frac{1}{N_i^2}\sum_{j \in \bar{s}_i}\sum_{k \in \bar{s}_i}\Big[E_{\hat{\boldsymbol\theta}}\{y^*_{ij}y^*_{ik}|\boldsymbol{y}_{s_i}^*\} - E_{\hat{\boldsymbol\theta}}\{y^*_{ij}|\boldsymbol{y}_{s_i}^*\}E_{\hat{\boldsymbol\theta}}\{y^*_{ik}|\boldsymbol{y}_{s_i}^*\}\Big]$$`
+
+???
+simulation studies (in the appendix) show CIs based on one-step MSE estimator have close-to-nominal coverage rate when `\(D=60\)`.
+
+---
+class: center, middle, inverse
+
+# Application to Small Area Estimation of &lt;br&gt;&lt;br&gt; the CEAP Cropland RUSLE2 in South Dakota
+
+---
+## RUSLE2
+
+.pull-left[
+&lt;img src="images/USLE_diagram_Icon.png" style="width: 100%" /&gt;
+]
+
+.pull-right[
+- Revised Universal Soil Loss Equation, version 2
+
+- Universal Soil Loss Equation (Wischmeir and Smith, 1965): 
+
+`$$\text{A} = \text{R K L S C P}$$`
+]
+
+&lt;br&gt;
+- Covariates related to R, K, S and C factors are collected for the full cropland population.
+
+???
+A - computed soil loss per unit area
+
+log-linear relationship
+
+RUSLE2 maintains many of the fundamental concepts of the USLE equation
+
+---
+.left-column[
+### Data Description
+]
+
+.right-column[
+`\(n=641\)` sampled cropland locations in South Dakota, CEAP
+
+#### Response
+**RUSLE2**: soil erosion (tons/yr)
+
+#### Auxiliary information
+
+**logR**: log-scale county-level rainfall factor 💦
+  
+**logK**: log-scale erodibility factor 🗻
+  
+**logS**: log-scale slope gradient factor 📐
+  
+**indicators**: crop categories 🌱
+]
+
+---
+.left-column[
+### Data Description
+### Parameter Estimates
+]
+
+.right-column[
+&lt;small&gt;Table: Maximum likelihood estimates and associated standard errors (SE) of the zero-inflated lognormal model parameters.
+&lt;center&gt;&lt;img src="images/para_est.png" width="80%"/&gt;&lt;/center&gt;
+
+&lt;br&gt;**Remark**: 
+&lt;br&gt;[1] A logit link `\(g(\mu) = \frac{e^{\mu}}{1+e^{\mu}}\)` is used for the binary part.
+&lt;br&gt;[2] A 95% confidence interval for `\(\rho\)` is `\((0.67, 0.84)\)`.&lt;/small&gt;
+]
+
+---
+.left-column[
+### Data Description
+### Parameter Estimates
+### Model Assessment
+]
+
+.right-column[
+
+#### Positive part
+- No evidence of lack of fit `\(\Leftarrow\)` residual plots
+  
+- Normal assumption holds `\(\Leftarrow\)` normal QQ plots and Shapiro-Wilk test
+
+#### Binary part
+- No evidence of lack of fit `\(\Leftarrow\)` Hosmer-Lemeshow test
+]
+
+???
+No evidence of voting against the logarithmic link function (versus other Box-Cox transformations) for the positive part `\(\Leftarrow\)` profile likelihood inferences.
+
+---
+.left-column[
+### Data Description
+### Parameter Estimates
+### Model Assessment
+### EB Predictions
+]
+
+.right-column[
+#### Visualization of SAE Results
+&lt;img src="images/EB_prediction.png" width="100%"/&gt;
+&lt;small&gt;Figure: Cartogram of the EB predictions of county-level average cropland RUSLE2 in South Dakota. Smaller shrinkage indicates smaller coefficient of variance.
+
+**Remark**: The **One-step** MSE estimator is used here to calculate coefficient of variance.&lt;/small&gt;
+]
+
+---
+.left-column[
+### Data Description
+### Parameter Estimates
+### Model Assessment
+### EB Predictions
+]
+
+.right-column[
+#### Comparison with direct estimator
+![](images/SD_SE_Boot.png)
+&lt;small&gt;Figure: Faceting by sample size, standard errors (SE) of the estimators of county-level average cropland RUSLE2 in South Dakota: (1) pooled SE of direct estimator (sample mean); (2) square root of One-step MSE estimator of EB; (3) square root of Semi-Boot MSE estimator of EB.
+
+**Remark**: Semi-Boot MSE estimator = One-step MSE estimator + Parametric Bootstrap Estimator of `\(M_2\)`
+&lt;/small&gt;
+]
+
+---
+class: center, middle, inverse
+
+# &lt;font color='red'&gt;VISCOVER&lt;/font&gt;: a web-based interactive tool to &lt;br&gt;&lt;br&gt; &lt;font color='red'&gt;VI&lt;/font&gt;sualize &lt;font color='red'&gt;S&lt;/font&gt;oil and &lt;font color='red'&gt;C&lt;/font&gt;rop data and their &lt;font color='red'&gt;OVER&lt;/font&gt;lay
+
+---
+## Motivation
+
+- Our model demands population-level covariates `\(\boldsymbol{z}_{ij}\)`
+
+  1. What should we use as covariates for CEAP RUSLE2 data?
+  
+  1. Where should we get the covariates?
+
+--
+&lt;center&gt;
+&lt;img src="images/USLE_diagram.png" style="width: 48%" /&gt;
+--
+&lt;img src="images/data_sources.png" style="width: 50%" /&gt;
+&lt;/center&gt;  
+
+--
+- Obtaining covariates requires integrating the data sources above.
+
+- VISCOVER helps to (1) visualize the complex spatial datasets above; (2) ensure the integration process is working correctly.
+
+---
+## Tool Demo
+
+&lt;iframe src="https://player.vimeo.com/video/321794430" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen&gt;&lt;/iframe&gt;
+
+.footnote[&lt;br&gt;**Remark**: VISCOVER is now featured in the [RStudio Shiny Gallery](https://shiny.rstudio.com/gallery/viscover.html). 🎉]
+
+---
+
+&lt;body&gt;
+&lt;style type="text/css"&gt;
+body, html
+{
+margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+#content
+{
+position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+&lt;/style&gt;
+&lt;div id="content"&gt;
+&lt;iframe width="100%" height="100%" frameborder="0" src="https://lyux.shinyapps.io/viscover/"/&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+
+---
+class: center, middle, inverse
+
+# My Past and Ongoing Projects
+
+---
+.left-column[
+### Survey Methodology
+]
+
+.right-column[
+#### Extensions: Nonlinear Population Parameters, Informative Sampling, Bias Correction of EB Confidence Intervals
+![](images/cp_ebp_quantiles.png)
+&lt;small&gt;Figure: Relative Bias of bootstrap MSE estimator (RBMSE) and coverage rates (CP) of 95% confidence intervals of area quantiles (25%, 50% and 75%) under the zero-inflated lognormal model based on the EBP method (Molina and Rao, 2010). &lt;/small&gt;
+]
+
+---
+.left-column[
+### Survey Methodology
+### Data Visualization
+]
+
+
+.right-column[
+#### More at [annielyu.com/#shiny](https://annielyu.com/#shiny)
+
+![](images/dataviz.png)
+.footnote[
+&lt;small&gt;**Reference**: 
+[1] **Lyu, X.**, Hofmann, H., Berg, E., and Li, J.  Applications of R Shiny to evaluate and improve total survey quality. Working Paper.
+[2] Laurent, A., **Lyu, X.**, et al. Interactive web-based data visualization and analysis tool for synthesizing on-farm research networks data. Submitted.&lt;/small&gt;
+]
+
+]
+
+---
+.left-column[
+### Survey Methodology
+### Data Visualization
+### Applied Statistics
+]
+
+.right-column[
+#### Multiple Species Inventory and Monitoring Program
+
+![](images/YBCUGam.png)
+&lt;small&gt; Figure: Heatmap of estimated colonization probability for Yellow-billed Cuckoo in the landform regions of Iowa.
+
+.footnote[
+**Reference**: Harms, T., Murphy, K., **Lyu, X.**, et al. (2017). "Using landscape habitat associations to prioritize areas of conservation action for terrestrial birds". In: PloS one 12.3, p. e0173041.
+]
+&lt;/small&gt;
+]
+
+???
+IDNR &amp; ISU-CSSM
+Robust Design Occupancy Model
+
+---
+.left-column[
+### Survey Methodology
+### Data Visualization
+### Applied Statistics
+]
+
+.right-column[
+#### Predict Location-level Soil Erosion Factors
+
+![](images/cfact_rf.png)
+&lt;small&gt; Figure: Random Forest (Breiman, 2001a) predictions of USLE C factors trained on NRI and CDL data in South Dakota, cropland. Grey color indicates non-cropland or off-state area.&lt;/small&gt; 
+
+.footnote[
+&lt;small&gt;**Reference**: **Lyu, X.**, Zhu, Z., Hofmann, H., Berg, E.  Prediction of grid-level soil erosion factors based on the National Resource Inventory survey and geostatistics. Working Paper.&lt;/small&gt;
+]
+]
+
+---
+background-image: url(images/wordcloud.png)
+background-size: 85%
+class: center 
+
+Visit me online at [annielyu.com](https://annielyu.com)
+
+---
+count: false
+
+## References
+
+&lt;small&gt;
+Battese, G. E, R. M. Harter, et al. (1988). "An error-components model
+for prediction of county crop areas using survey and satellite data".
+In: _Journal of the American Statistical Association_ 83.401, pp.
+28-36.
+
+Berg, E. and H. Chandra (2014). "Small area prediction for a unit-level
+lognormal model". In: _Computational Statistics &amp; Data Analysis_ 78,
+pp. 159-175. DOI:
+[10.1016/j.csda.2014.03.007](https://doi.org/10.1016%2Fj.csda.2014.03.007).
+
+Breiman, L. (2001a). "Random forests". In: _Machine learning_ 45.1, pp.
+5-32.
+
+Chandra, H. and R. Chambers (2016). "Small area estimation for
+semicontinuous data". In: _Biometrical Journal_ 58.2, pp. 303-319. DOI:
+[10.1002/bimj.201300233](https://doi.org/10.1002%2Fbimj.201300233).
+
+Dreassi, E, A. Petrucci, et al. (2014). "Small area estimation for
+semicontinuous skewed spatial data: An application to the grape wine
+production in Tuscany". In: _Biometrical Journal_ 56.1, pp. 141-156.
+DOI:
+[10.1002/bimj.201200271](https://doi.org/10.1002%2Fbimj.201200271).
+
+Fay III, R. E. and R. A. Herriot (1979). "Estimates of income for small
+places: an application of James-Stein procedures to census data". In:
+_Journal of the American Statistical Association_ 74.366a, pp. 269-277.
+DOI: [10.2307/2286322](https://doi.org/10.2307%2F2286322).
+&lt;/small&gt;
+
+---
+count: false
+
+## References
+
+&lt;small&gt;
+Molina, I. and J. Rao (2010). "Small area estimation of poverty
+indicators". In: _Canadian Journal of Statistics_ 38.3, pp. 369-385.
+DOI: [10.1002/cjs.10051](https://doi.org/10.1002%2Fcjs.10051).
+
+Pfeffermann, D, B. Terryn, et al. (2008). "Small area estimation under
+a two-part random effects model with application to estimation of
+literacy in developing countries". In: _Survey Methodology_ 34.2, pp.
+235-249.
+
+Rao, J. and I. Molina (2015). _Small Area Estimation_. John Wiley &amp;
+Sons, pp. 5-8.
+
+Wischmeir, W. H. and D. D. Smith (1965). _Predicting rainfall erosion
+losses from cropland east of the Rocky Mountains: guide for selection
+for practices for soil and water conservation_. Agricultural handbook
+NO.282. U.S. Department of Agriculture.
+&lt;/small&gt;
+
+---
+count: false
+class: middle, center, inverse
+
+# Appendix
+
+---
+count: false
+
+## Conditional Distribution
+
+#### Result 1: 
+`$$u_i|\color{blue}{b_i}, \boldsymbol{y}^*_{s_i} \overset{ind}{\sim} N(\gamma_i\bar{\tilde{r}}_i+(1-\gamma_i)\rho\frac{\sigma_u}{\sigma_b}{b_i}, \tilde{\sigma}^2_{u_i})$$`
+where `$$\tilde\mu_{u_i} = \gamma_i\bar{\tilde{r}}_i+(1-\gamma_i)\rho\frac{\sigma_u}{\sigma_b}{b_i}, \tilde\sigma_{u_i}^2 = \gamma_i{\sigma_e^2}/{\tilde{n}_i}$$`
+and `\({\gamma_i} = \frac{(1-\rho^2)\sigma_u^2} {(1-\rho^2)\sigma_u^2+\sigma_e^2/\tilde{n}_i}, \tilde{n}_i=\sum_{j\in s_i}\delta_{ij}\)`, `$$\bar{\tilde{r}}_i= \underbrace{\tilde{n}_i^{-1}\sum_{j\in s_i} \delta_{ij}\{\log(y_{ij})-\beta_0-\boldsymbol{z}_{1,ij}'\boldsymbol\beta_1\}}_{\text{average residuals from the positive part}}$$`
+
+**Remark**: `\(0 \leq \gamma_i \leq 1\)`
+
+---
+count: false
+
+#### Result 2: 
+`$$[b_i|\boldsymbol{y}_{s_i}^*] \propto \pi_{s_i}(b_i)\phi(\frac{b_i-m_i}{\sqrt{v_i}})$$`
+where `\(\phi(\cdot)\)` denotes probability density function of `\(N(0,1)\)`,
+`$$(m_i, v_{i}) =(\underbrace{\frac{\rho\sigma_u\sigma_b}{\sigma_u^2+\sigma_e^2/\tilde{n}_i}\bar{\tilde{r}}_i,\frac{1-\rho^2}{1-(1-\gamma_i)\rho^2}\sigma_b^2}_{\text{informed by the positive part}})$$`
+`$$\pi_{s_i}(b_i)=\underbrace{\prod_{j \in s_i}\Big [ p_{ij}^{\delta_{ij}}(1-p_{ij})^{1-\delta_{ij}}\Big ]}_{\text{likelihood of observing the binary part}}$$`
+and `\(p_{ij}(b_i)=g^{-1}(\alpha_0+\boldsymbol\alpha_1\mathbf z_{ij}+b_i)\)`.
+
+---
+count: false
+
+## One-Step MSE estimator
+`$$V_{\color{blue}{\hat{\boldsymbol\theta}}}(\zeta_{i}|\boldsymbol{y}_{s_i}^*) = \frac{1}{N_i^2}\sum_{j \in \bar{s}_i}\sum_{k \in \bar{s}_i}\Big[E_{\hat{\boldsymbol\theta}}\{y^*_{ij}y^*_{ik}|\boldsymbol{y}_{s_i}^*\} - E_{\hat{\boldsymbol\theta}}\{y^*_{ij}|\boldsymbol{y}_{s_i}^*\}E_{\hat{\boldsymbol\theta}}\{y^*_{ik}|\boldsymbol{y}_{s_i}^*\}\Big]$$`
+where
+`$$E_{\boldsymbol\theta}\{y^*_{ij}y^*_{ik}|\boldsymbol{y}_{s_i}^*\} = h_{ij}h_{ik}\exp(\tilde{\sigma}_{u_i}^2)E_{\boldsymbol\theta}[p_{ij}p_{ik}{\eta(2b_i)}|\boldsymbol{y}_{s_i}^*],j \neq k$$`
+and `$$E_{\boldsymbol\theta}\{y^*_{ij}y^*_{ik}|\boldsymbol{y}_{s_i}^*\} = h_{ij}^2\exp(\tilde{\sigma}_{u_i}^2+\sigma_e^2)E_{\boldsymbol\theta}[{p_{ij}}{\eta(2b_i)}|\boldsymbol{y}_{s_i}^*],j = k$$`
+
+---
+count: false
+
+## Simulation Setting
+
+- Number of areas: `\(D = 60\)`
+
+- Sample rate: `\((N_i, n_i) = (71, 5), (143, 10), (286, 20)\)` for every 20 areas so that `\((N, n)=(10000, 700)\)`
+
+- `logit` link for the binary part
+
+- One-dimensional covariates: `\(z_{ij}\sim N(4.45, 0.055)\)`
+
+- `\(\boldsymbol\beta = (-13, 2)', \boldsymbol\alpha = (-20, 5)'\)`, `\((\sigma_u^2, \sigma_e^2, \sigma_b^2) = (0.22, 1.23, 0.52)\)`
+
+- `\(\rho \in \{-0.9, -0.6, -0.3, 0, 0.3, 0.6, 0.9\}\)`
+
+---
+count: false
+
+## Simulation Results
+
+#### Empirical Properties
+
+`$$\rm{RBMSE}_i = \frac{\hat{\rm{MSE}}_{i} - \rm{MSE}(\hat\zeta_i)}{\rm{MSE}(\hat\zeta_i)}, \rm{CI}_i = \hat\zeta_i^{\rm{EB}}\pm1.96\sqrt{\hat{\rm{MSE}}_{i}}$$`
+&lt;center&gt;&lt;img src="images/sim1.png" width="800"/&gt;&lt;/center&gt;
+&lt;small&gt;Table: When `\(\rho = 0.9\)`, relative bias and coverage rate of nominal 95% confidence intervals based on different MSE estimators: One-step, parametric bootstrap and [Semi-Boot](#40). Each value is an average across the areas with the same sample size `\(n_i\)` based on 1000
+simulations and 100 bootstrap samples.
+&lt;/small&gt;
+
+---
+count: false
+
+## Simulation Results
+
+#### Comparison with Alternate Predictors
+
+`$$\rm{RDMSE}_i = \frac{{\rm{MSE}}_{i}(\hat\zeta_i) - \rm{MSE}(\hat\zeta_i^{\rm{EB}})}{\rm{MSE}(\hat\zeta_i^{\rm{EB}})}$$`
+
+&lt;center&gt;&lt;img src="images/sim2.png" width="400"/&gt;&lt;/center&gt;
+&lt;small&gt;Table: The relative differences of MSEs of the alternative predictors (EB(0), EB predictor assuming
+`\(\rho = 0\)`; PI, plug-in predictor; ZI, zero-ignored [MMSE predictor](#12); SI, shifted MMSE predictor) compared with the EB predictor.
+&lt;/small&gt;
+
+---
+count: false
+
+## Calculating the EB predictor for the data analysis
+
+&lt;small&gt;Table: The data structure for predicting cropland RUSLE2 in South Dakota.&lt;/small&gt;
+![](images/pop_data.png)
+
+- table row `\(\Rightarrow\)` a map unit segment
+
+- For the `\(g_{\mathrm{th}}\)` map unit segment of county `\(i\)`, denote
+
+  + `\(\hat{y}^*_{ig}\)`: EB prediction (invariant within a segment)
+  + `\(\color{blue}{Q_{ig}}\)`: count of CDL pixels
+
+- `\(\hat \zeta_{i}^{\rm{EB}} \approx \frac{1}{N_i}\sum_{g=1}^{G_i}Q_{ig}\hat{y}^*_{ig}\)` since `\(n_i \ll N_i\)`
+
+- Similarly we can write the One-step MSE estimator as a function of `\(Q_{ig}\)`.
+
+---
+count: false
+
+## Natural Resource Inventory (NRI)
+
+- A longitudinal survey of non-federal US land 
+
+  + conducted by USDA-NRCS and ISU-CSSM since 1982
+  
+- NRCS estimates level and change for many variables:
+
+  + surface area (in acres) by land cover/use
+  
+  + average soil erosion on cropland and pastureland (national and state level)
+  
+- Crop fields in CEAP are a subset of NRI crop locations.
+  
+- NRI location-level data `\(\Rightarrow\)` county-level USLE &lt;mark&gt;R factor&lt;/mark&gt;
+
+???
+
++ PSU = .5 mi x .5 mi segment, SSU = 3 point locations per PSU
+
+---
+count: false
+
+## Soil Survey Areas versus County
+
+![](images/area_cty.png)
+&lt;small&gt; Figure: Map of 10 soil survey areas (colored) each of which consists of multiple counties or part of multiple counties in South Dakota.&lt;/small&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
