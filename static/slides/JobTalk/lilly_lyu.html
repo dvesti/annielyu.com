@@ -137,6 +137,11 @@ class: inverse, middle, center
 
 1. &lt;font color='blue'&gt;VISCOVER&lt;/font&gt;, an interactive visualization tool to explore large-scale and complex spatial data.
 
+--
+
+.footnote[
+&lt;small&gt;**Reference**: [1] **Lyu, X.**, Berg, E. and Hofmann H. Empirical Bayes small area prediction under a zero-inflated log-normal model with correlated random area effects. revision invited from the *Biometrical Journal*. [2] **Lyu, X.**. [saezero](https://github.com/XiaodanLyu/saezero). R package version 0.1.0.&lt;/small&gt;]
+
 ???
 1. The numeric challenge in obtaining a consistent parameter estimator is addressed by deriving the full maximum likelihood function.
 1. For a linear model, the population mean of the covariate for each area is sufficient.
@@ -153,42 +158,31 @@ class: inverse, middle, center
 &lt;/small&gt;
 
 ---
-## CEAP Cropland Assessment
+## Problem Statement
 
 &lt;small&gt;
-- Parameter of interest: soil erosion rates from crop fields at the county level
-- Use mixed effects model to
-  + incorporate auxiliary information `\(\rightarrow\)` fixed effects
-  + account for between-county variation `\(\rightarrow\)` random county effects
+- &lt;span style="color: blue;"&gt;Objective&lt;/span&gt;: soil erosion rates from crop fields at the county level
+- Solution
+  + use model to impute/predict non-sampled responses
+  + average across all population units
 &lt;/small&gt;
-
-![](images/sd_sample_size.png)
-&lt;small&gt;Figure: Choropleth map of the sample size for each county in South Dakota, CEAP Cropland.&lt;/small&gt;
-
-???
-
-Standard survey estimators are often unreliable given small sample sizes. (Rao, Molina, 2015)
-
----
-## CEAP Cropland RUSLE2 in South Dakota
-
-RUSLE2 `\(\Rightarrow\)` soil erosion in tons/year
   
 ![](images/RUSLE2_hist.png)
-&lt;small&gt;Figure: Histogram of RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
+&lt;small&gt;Figure: Histogram of collected RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
 
 ---
 count: false
 
-## CEAP Cropland RUSLE2 in South Dakota
+## Response Variable
 
 RUSLE2 `\(\Rightarrow\)` soil erosion in tons/year
   
 ![](images/RUSLE2_hist_annotated.png)
 
-&lt;small&gt;Figure: Histogram of RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
+&lt;small&gt;Figure: Histogram of collected RUSLE2 measurements in South Dakota, CEAP Cropland.&lt;/small&gt;
 
 ---
+exclude: true
 ## Existing Methods
 
 - Skewed responses contaminated with zeros:  
@@ -209,16 +203,17 @@ RUSLE2 `\(\Rightarrow\)` soil erosion in tons/year
   + Empirical Bayes method under a lognormal mixed effects model (Berg and Chandra, 2014)
 
 ---
-## CEAP Cropland RUSLE2 in South Dakota
-
-&lt;center&gt;&lt;img src="images/scatter_cor.png" style="width: 70%" /&gt;&lt;/center&gt;
-
-&lt;small&gt;Figure: Scatter plot of proportion of positive RUSLE2 measurements versus average of positive RUSLE2s in log scale for counties in South Dakota, CEAP Cropland&lt;/small&gt; 
-
----
 ## Model Assumption - zero-inflated lognormal
 
 Suppose soil loss `\({y}_{ij}^*\)` at `\(j_{\rm{th}}\)` location in county `\(i\)` satisfies `\(\color{red}{{y}_{ij}^*=y_{ij}\delta_{ij}}\)`
+
+- Two-part model: 
+
+  + Variable of interest: `\(y_{ij}^*\)`, &lt;mark&gt;actual soil erosion&lt;/mark&gt;, either 0 or skewed right.
+
+  + `\(y_{ij}^* = 0.005 \Rightarrow (y_{ij}, \delta_{ij}) = (0.005, 1); y_{ij}^*=0 \Rightarrow (y_{ij}, \delta_{ij}) = (?, 0)\)`
+  
+--
 
 - **Positive part**: `\(y_{ij}&gt;0\)`, &lt;span style="color: blue;"&gt;skewed right erosion&lt;/span&gt;
 `$$\log(y_{ij})=\beta_0+\mathbf{z}'_{1,ij}\boldsymbol{\beta}_1+u_i+e_{ij}$$`
@@ -230,13 +225,12 @@ where `\(e_{ij} \overset{i.i.d}{\sim} N(0, \sigma^2_e)\)`.
 `$$g(p_{ij})=\alpha_0+\mathbf{z}_{2,ij}'\boldsymbol\alpha_1+b_i$$`
 where `\(g(\cdot)\)` is a parametric link function to be specified.
 
---
+---
+## Empirical Evidence of Correlation
 
-- Remark: 
+&lt;center&gt;&lt;img src="images/scatter_cor.png" style="width: 70%" /&gt;&lt;/center&gt;
 
-  + Variable of interest: `\(y_{ij}^*\)`, &lt;mark&gt;actual soil erosion&lt;/mark&gt;, either 0 or skewed right.
-
-  + `\(y_{ij}^*&gt;0 \Rightarrow (y_{ij}, \delta_{ij}) = (y_{ij}^*, 1); y_{ij}^*=0 \Rightarrow (y_{ij}, \delta_{ij}) = (\mathrm{NA}, 0)\)`
+&lt;small&gt;Figure: Scatter plot of proportion of positive RUSLE2 measurements versus average of positive RUSLE2s in log scale for counties in South Dakota, CEAP Cropland&lt;/small&gt; 
 
 ---
 ## Model Assumption - correlated random effects
@@ -246,9 +240,6 @@ where `\(g(\cdot)\)` is a parametric link function to be specified.
 - random county effects `\(\Rightarrow\)` between-county variance.
 
 - `\(\rho \in (-1, 1) \Rightarrow\)` correlation between two parts.
-
-.footnote[
-&lt;small&gt;**Reference**: [1] **Lyu, X.**, Berg, E. and Hofmann H. Empirical Bayes small area prediction under a zero-inflated log-normal model with correlated random area effects. revision invited from the *Biometrical Journal*. [2] **Lyu, X.**. [saezero](https://github.com/XiaodanLyu/saezero). R package version 0.1.0.&lt;/small&gt;]
   
 ???
 
