@@ -4,7 +4,7 @@ external_link:
 image:
   caption: 
   focal_point: Smart
-summary: Predictive occurrence maps for Species of Greatest Conservation Need (SGCN) using data from the MSIM program.
+summary: Predictive occupancy maps for Endangered Wild Species Monitored by the Iowa Department of Natural Resources.
 tags:
 - shiny
 - dataviz
