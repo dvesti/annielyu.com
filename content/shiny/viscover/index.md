@@ -1,11 +1,11 @@
 ---
 date: "2019-12-01"
-external_link: "https://lyux.shinyapps.io/viscover/"
+external_link: "https://shiny.rstudio.com/gallery/viscover.html"
 image:
   caption:
   focal_point: Smart
 slides: 
-summary: This is a shiny app tool designed for interacting with Cropland Data Layer and NRCS Soil Survey Data.
+summary: Designed to interact with USDA-NASS Cropland Data Layer and USDA-NRCS Soil Survey Data. Featured in the RStudio Shiny gallery.
 tags:
 - shiny
 - dataviz

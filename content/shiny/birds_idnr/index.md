@@ -1,10 +1,10 @@
 ---
 date: "2016-09-01"
-external_link: 
+external_link: "/publication/iowa-birds/"
 image:
   caption: 
   focal_point: Smart
-summary: Predictive occupancy maps for Endangered Wild Species Monitored by the Iowa Department of Natural Resources.
+summary: Designed to interact with the predictive occupancy map for endangered wild species monitored by the Iowa Department of Natural Resources.
 tags:
 - shiny
 - dataviz
