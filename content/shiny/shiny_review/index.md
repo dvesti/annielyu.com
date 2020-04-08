@@ -4,7 +4,7 @@ external_link: https://lyux.shinyapps.io/table_review/
 image:
   caption: 
   focal_point: Smart
-summary: Designed to check Natural Resources Inventory output.
+summary: Designed to check National Resources Inventory output.
 tags:
 - shiny
 - dataviz

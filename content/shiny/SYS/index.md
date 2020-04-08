@@ -4,7 +4,7 @@ external_link: https://lyux.shinyapps.io/Stat421_Lab05_SYS/
 image:
   caption: 
   focal_point: Smart
-summary: An example for Stat421 Lab05.
+summary: An example for STAT421 (Survey Statistics) Lab05.
 tags:
 - shiny
 - dataviz
